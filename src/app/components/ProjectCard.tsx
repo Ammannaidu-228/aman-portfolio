@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, Variant } from 'framer-motion';
 import { Github, ExternalLink, Calendar, Tag, Star } from 'lucide-react';
 
 interface ProjectCardProps {
@@ -23,7 +23,10 @@ interface ProjectCardProps {
 export default function ProjectCard({ project, index }: ProjectCardProps) {
   const [imageLoaded, setImageLoaded] = useState(false);
   
-  const cardVariants = {
+  const cardVariants: {
+    hidden: Variant;
+    visible: Variant;
+  } = {
     hidden: { opacity: 0, y: 50 },
     visible: { 
       opacity: 1, 
@@ -36,7 +39,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     }
   };
 
-  const imageVariants = {
+  const imageVariants: {
+    hidden: Variant;
+    visible: Variant;
+  } = {
     hidden: { scale: 1.2, opacity: 0 },
     visible: { 
       scale: 1, 
@@ -45,7 +51,10 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
     }
   };
 
-  const overlayVariants = {
+  const overlayVariants: {
+    hidden: Variant;
+    visible: Variant;
+  } = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 }
   };

@@ -6,21 +6,28 @@ export default function ResponsiveNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [scrollProgress, setScrollProgress] = useState(0);
   
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      // Calculate scroll progress
+      if (typeof window !== 'undefined') {
+        setScrollProgress(Math.min(window.scrollY / 2000, 1));
+      }
     };
     
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }
   }, []);
 
   // Close mobile menu when clicking outside or on link
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (isOpen && !event.target.closest('.mobile-menu-container')) {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (isOpen && !(event.target as Element).closest('.mobile-menu-container')) {
         setIsOpen(false);
       }
     };
@@ -220,7 +227,7 @@ export default function ResponsiveNavbar() {
                   className="w-full flex items-center justify-center gap-3 px-6 py-4 sm:py-5 bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 text-white rounded-xl font-bold text-lg sm:text-xl hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105"
                 >
                   <Cpu size={24} />
-                  Let's Work Together
+                  Let&apos;s Work Together
                 </a>
                 
                 {/* Mobile Social Links */}
@@ -262,9 +269,9 @@ export default function ResponsiveNavbar() {
       </div>
 
       {/* Progress Bar */}
-      <div className="fixed top-0 left-0 right-0 h-0.5 sm:h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 origin-left z-50 transform scale-x-0" 
+      <div className="fixed top-0 left-0 right-0 h-0.5 sm:h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 origin-left z-50 transform" 
            style={{
-             transform: `scaleX(${Math.min(window.scrollY / 2000, 1)})`,
+             transform: `scaleX(${scrollProgress})`,
              transition: 'transform 0.1s ease-out'
            }} />
 

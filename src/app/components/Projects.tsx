@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, Variant } from 'framer-motion';
 import { Code2, ExternalLink, Github, Star, Calendar, Zap, ArrowUpRight, Sparkles } from 'lucide-react';
 import ProjectCard from './ProjectCard';
 
@@ -59,7 +59,10 @@ export default function Projects() {
     }
   };
 
-  const containerVariants = {
+  const containerVariants: {
+    hidden: Variant;
+    visible: Variant;
+  } = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -69,7 +72,10 @@ export default function Projects() {
     }
   };
 
-  const titleVariants = {
+  const titleVariants: {
+    hidden: Variant;
+    visible: Variant;
+  } = {
     hidden: { opacity: 0, y: 30 },
     visible: { 
       opacity: 1, 
@@ -164,7 +170,7 @@ export default function Projects() {
             dark:text-gray-300 dark:font-medium
           ">
             <span className="dark:hidden">Showcasing innovative solutions built with cutting-edge technologies</span>
-            <span className="hidden dark:inline">🚀 Next-generation applications pushing the boundaries of what's possible</span>
+            <span className="hidden dark:inline">🚀 Next-generation applications pushing the boundaries of what&apos;s possible</span>
           </p>
         </motion.div>
 
