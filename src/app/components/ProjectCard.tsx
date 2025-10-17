@@ -91,13 +91,13 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
         </div>
       </div>
 
-      {/* Image Container */}
-      <div className="relative h-48 bg-gray-200 dark:bg-gray-800 overflow-hidden">
+      {/* Image Container - Updated dimensions */}
+      <div className="relative h-50 sm:h-72 bg-gray-200 dark:bg-gray-800 overflow-hidden">
         <motion.img 
           variants={imageVariants}
           initial="hidden"
           animate={imageLoaded ? "visible" : "hidden"}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+          className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" 
           src={project.img} 
           alt={project.title}
           onLoad={() => setImageLoaded(true)}

@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 // import Navbar from '../components/Navbar';
 
 export const metadata = {
-  title: 'Aman — SDE2 Portfolio',
+  title: 'Ammannaidu',
   description: 'Portfolio site — MERN / Next.js / AWS',
 };
 

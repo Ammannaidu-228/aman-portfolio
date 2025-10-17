@@ -57,20 +57,6 @@ export default function Footer() {
       href: '#', 
       color: 'hover:text-blue-400',
       bg: 'hover:bg-blue-500/20'
-    },
-    { 
-      icon: Twitter, 
-      label: 'Twitter', 
-      href: '#', 
-      color: 'hover:text-cyan-400',
-      bg: 'hover:bg-cyan-500/20'
-    },
-    { 
-      icon: Mail, 
-      label: 'Email', 
-      href: 'mailto:your.email@domain.com', 
-      color: 'hover:text-emerald-400',
-      bg: 'hover:bg-emerald-500/20'
     }
   ];
 
@@ -123,8 +109,8 @@ export default function Footer() {
                     <Code2 size={28} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white">Your Name</h3>
-                    <p className="text-cyan-400 font-semibold">SDE-2 • Full Stack Developer</p>
+                    <h3 className="text-2xl font-bold text-white">Ammannaidu Gollapalli</h3>
+                    <p className="text-cyan-400 font-semibold">Software Engineer</p>
                   </div>
                 </div>
                 <p className="text-slate-300 leading-relaxed">
@@ -141,11 +127,11 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors group">
                   <Phone size={18} className="group-hover:scale-110 transition-transform" />
-                  <span>+91 XXXXX XXXXX</span>
+                  <span>+91 8978239237</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors group">
                   <Mail size={18} className="group-hover:scale-110 transition-transform" />
-                  <span>your.email@domain.com</span>
+                  <span>n160228@rguktn.ac.in</span>
                 </div>
               </div>
 
@@ -212,37 +198,10 @@ export default function Footer() {
                 Let&apos;s Connect
               </h4>
               
-              <div className="space-y-4">
-                <div>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="your.email@example.com"
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-slate-400 focus:border-cyan-400/50 focus:outline-none transition-colors"
-                  />
-                </div>
-                <div>
-                  <textarea
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    placeholder="Your message..."
-                    rows={4}
-                    className="w-full px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-xl text-white placeholder-slate-400 focus:border-cyan-400/50 focus:outline-none transition-colors resize-none"
-                  />
-                </div>
-                <button
-                  onClick={handleSubmit}
-                  className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all transform hover:scale-105 active:scale-95 flex items-center justify-center gap-2 group"
-                >
-                  <Send size={18} className="group-hover:translate-x-1 transition-transform" />
-                  Send Message
-                </button>
-              </div>
+
 
               {/* Social Links */}
               <div className="pt-4">
-                <p className="text-slate-400 text-sm mb-4">Follow me on</p>
                 <div className="flex gap-3">
                   {socialLinks.map((social) => {
                     const Icon = social.icon;
@@ -267,18 +226,9 @@ export default function Footer() {
         <div className="border-t border-slate-800/50">
           <div className="max-w-6xl mx-auto px-6 py-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-2 text-slate-400">
-                <span>Made with</span>
-                <Heart size={16} className="text-red-500 animate-pulse" />
-                <span>using React & Tailwind CSS</span>
-              </div>
               
               <div className="flex items-center gap-6 text-slate-400 text-sm">
-                <span>© 2025 Your Name. All rights reserved.</span>
-                <a href="#privacy" className="hover:text-cyan-400 transition-colors flex items-center gap-1">
-                  Privacy
-                  <ExternalLink size={12} />
-                </a>
+                <span>© 2025 Ammannaidu. All rights reserved.</span>
               </div>
             </div>
           </div>

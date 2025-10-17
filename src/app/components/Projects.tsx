@@ -7,9 +7,9 @@ import ProjectCard from './ProjectCard';
 
 const projects = [
   { 
-    title: 'Shoply - E-commerce Platform', 
+    title: 'Threadora- E-commerce Platform', 
     desc: 'Full-stack MERN e-commerce with secure payments, advanced search, Redis caching, and real-time inventory management',
-    img: '/images/E-Commerce.png', 
+    img: '/images/threadora-logo.png', 
     repo: '#', 
     demo: '#',
     tech: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redis'],
@@ -19,26 +19,26 @@ const projects = [
     year: '2024'
   },
   { 
-    title: 'Collab — Real-time Editor', 
-    desc: 'Collaborative code editor with WebSocket real-time sync, user presence indicators, and syntax highlighting',
-    img: '/images/chatApp.png', 
+    title: 'Milo - Real time Chat Application', 
+    desc: 'Chat app with instant messaging, typing indicators, and online presence.',
+    img: '/images/milo-logo.png', 
     repo: '#', 
     demo: '#',
-    tech: ['React', 'Socket.io', 'Node.js', 'Monaco Editor'],
+    tech: ['React', 'Socket.io', 'Node.js', 'Redis', 'DynamoDb', 'S3'],
     category: 'Real-time',
     status: 'Live',
-    featured: true,
+    featured: false,
     year: '2024'
   },
   { 
-    title: 'Resume AI Analyzer', 
-    desc: 'Serverless AI-powered resume analysis with scoring, improvement suggestions, and ATS optimization',
-    img: '/images/Ai-agents.jpg', 
+    title: 'LitPick - Book Recommender', 
+    desc: 'Recommendation engine using collaborative filtering and content-based algorithms to suggest personalized books for book enthusiasts.',
+    img: '/images/lit-pick-logo.png', 
     repo: '#', 
-    demo: '#',
-    tech: ['Next.js', 'OpenAI', 'AWS Lambda', 'Python'],
+    demo: 'https://lit-pick.vercel.app/',
+    tech: ['Flask', 'skikit-learn', 'Numpy', 'Pandas'],
     category: 'AI/ML',
-    status: 'Beta',
+    status: 'Live',
     featured: false,
     year: '2024'
   }
@@ -283,12 +283,22 @@ export default function Projects() {
 
                     {/* Buttons - Pushed to bottom with mt-auto */}
                     <div className="flex gap-2 sm:gap-3 mt-auto">
-                      <a href={project.demo} className="flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 px-3 sm:px-4 rounded-lg font-medium text-sm sm:text-base bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                      <a 
+                        href={project.demo} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 px-3 sm:px-4 rounded-lg font-medium text-sm sm:text-base bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+                      >
                         <ExternalLink className="w-3 sm:w-4 h-3 sm:h-4" />
                         <span className="hidden sm:inline">Demo</span>
                         <span className="sm:hidden">Demo</span>
                       </a>
-                      <a href={project.repo} className="flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 px-3 sm:px-4 rounded-lg font-medium text-sm sm:text-base bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors border border-gray-200">
+                      <a 
+                        href={project.repo} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 px-3 sm:px-4 rounded-lg font-medium text-sm sm:text-base bg-gray-100 text-gray-700 hover:bg-gray-200 transition-colors border border-gray-200"
+                      >
                         <Github className="w-3 sm:w-4 h-3 sm:h-4" />
                         <span className="hidden sm:inline">Code</span>
                         <span className="sm:hidden">Code</span>
@@ -352,11 +362,21 @@ export default function Projects() {
 
                     {/* Buttons */}
                     <div className="flex gap-2 sm:gap-3 mt-auto">
-                      <a href={project.demo} className="flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-3 px-3 sm:px-4 rounded-xl font-bold text-sm sm:text-base bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-purple-500/50">
+                      <a 
+                        href={project.demo} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-3 px-3 sm:px-4 rounded-xl font-bold text-sm sm:text-base bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 shadow-lg hover:shadow-purple-500/50"
+                      >
                         <ArrowUpRight className="w-3 sm:w-4 h-3 sm:h-4" />
                         DEMO
                       </a>
-                      <a href={project.repo} className="flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-3 px-3 sm:px-4 rounded-xl font-bold text-sm sm:text-base bg-gray-800/50 text-purple-200 hover:bg-gray-700/50 transition-all border border-purple-500/30 hover:border-purple-400 backdrop-blur-sm">
+                      <a 
+                        href={project.repo} 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 flex items-center justify-center gap-1 sm:gap-2 py-2 sm:py-3 px-3 sm:px-4 rounded-xl font-bold text-sm sm:text-base bg-gray-800/50 text-purple-200 hover:bg-gray-700/50 transition-all border border-purple-500/30 hover:border-purple-400 backdrop-blur-sm"
+                      >
                         <Github className="w-3 sm:w-4 h-3 sm:h-4" />
                         CODE
                       </a>
@@ -384,6 +404,8 @@ export default function Projects() {
             </p>
             <motion.a
               href="#"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 px-6 sm:px-8 py-2 sm:py-3 rounded-xl font-semibold text-sm sm:text-base bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:shadow-lg transition-all"
@@ -407,6 +429,8 @@ export default function Projects() {
               </p>
               <motion.a
                 href="#"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.92 }}
                 className="inline-flex items-center gap-2 sm:gap-3 px-8 sm:px-12 py-3 sm:py-4 rounded-2xl font-black text-base sm:text-lg bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 transition-all transform hover:rotate-1 shadow-lg hover:shadow-purple-500/50 border border-purple-400"
