@@ -1,9 +1,9 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import { 
-  Mail, 
-  Github, 
-  Linkedin, 
+"use client";
+import React, { useState, useEffect } from "react";
+import {
+  Mail,
+  Github,
+  Linkedin,
   Twitter,
   MapPin,
   Phone,
@@ -12,12 +12,12 @@ import {
   ArrowUp,
   Code2,
   Zap,
-  ExternalLink
-} from 'lucide-react';
+  ExternalLink,
+} from "lucide-react";
 
 export default function Footer() {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -34,49 +34,49 @@ export default function Footer() {
     const handleScroll = () => {
       setShowScrollTop(window.scrollY > 500);
     };
-    
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const socialLinks = [
-    { 
-      icon: Github, 
-      label: 'GitHub', 
-      href: '#', 
-      color: 'hover:text-white',
-      bg: 'hover:bg-slate-700'
+    {
+      icon: Github,
+      label: "GitHub",
+      href: "https://github.com/Ammannaidu-228",
+      color: "hover:text-white",
+      bg: "hover:bg-slate-700",
     },
-    { 
-      icon: Linkedin, 
-      label: 'LinkedIn', 
-      href: '#', 
-      color: 'hover:text-blue-400',
-      bg: 'hover:bg-blue-500/20'
-    }
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/ammannaidu-gollapalli-4591a639b/",
+      color: "hover:text-blue-400",
+      bg: "hover:bg-blue-500/20",
+    },
   ];
 
   const quickLinks = [
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Contact', href: '#contact' }
+    { label: "About", href: "#about" },
+    { label: "Projects", href: "#projects" },
+    { label: "Skills", href: "#skills" },
+    { label: "Experience", href: "#experience" },
+    { label: "Contact", href: "#contact" },
   ];
 
   const handleSubmit = () => {
     // Handle form submission here
-    console.log('Form submitted:', { email, message });
-    setEmail('');
-    setMessage('');
+    console.log("Form submitted:", { email, message });
+    setEmail("");
+    setMessage("");
   };
 
   return (
-    <footer className="relative bg-gradient-to-b from-slate-950 via-slate-900 to-black overflow-hidden">
+    <footer id="contact" className="relative bg-gradient-to-b from-slate-950 via-slate-900 to-black overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl" />
@@ -86,11 +86,12 @@ export default function Footer() {
 
       {/* Animated Grid */}
       <div className="absolute inset-0 opacity-5">
-        <div 
+        <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.4) 1px, transparent 0)',
-            backgroundSize: '50px 50px'
+            backgroundImage:
+              "radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.4) 1px, transparent 0)",
+            backgroundSize: "50px 50px",
           }}
         />
       </div>
@@ -99,7 +100,6 @@ export default function Footer() {
         {/* Main Footer Content */}
         <div className="max-w-6xl mx-auto px-6 py-16">
           <div className="grid lg:grid-cols-3 gap-12">
-            
             {/* Left Column - Branding & Contact */}
             <div className="space-y-8">
               {/* Logo/Brand */}
@@ -109,29 +109,44 @@ export default function Footer() {
                     <Code2 size={28} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-white">Ammannaidu Gollapalli</h3>
-                    <p className="text-cyan-400 font-semibold">Software Engineer</p>
+                    <h3 className="text-2xl font-bold text-white">
+                      Ammannaidu Gollapalli
+                    </h3>
+                    <p className="text-cyan-400 font-semibold">
+                      Software Engineer
+                    </p>
                   </div>
                 </div>
                 <p className="text-slate-300 leading-relaxed">
-                  Passionate about creating scalable applications and innovative solutions. 
-                  Always learning, always building.
+                  3+ yrs experience in Java, Spring Boot,
+                  Microservices, SQL/NoSQL, AWS, and distributed systems. Strong
+                  in DSA, performance optimization, and building scalable,
+                  production-grade services.
                 </p>
               </div>
 
               {/* Contact Info */}
               <div className="space-y-3">
                 <div className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors group">
-                  <MapPin size={18} className="group-hover:scale-110 transition-transform" />
-                  <span>Hyderabad, India</span>
+                  <MapPin
+                    size={18}
+                    className="group-hover:scale-110 transition-transform"
+                  />
+                  <span>Vizag, India</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors group">
-                  <Phone size={18} className="group-hover:scale-110 transition-transform" />
+                  <Phone
+                    size={18}
+                    className="group-hover:scale-110 transition-transform"
+                  />
                   <span>+91 8978239237</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors group">
-                  <Mail size={18} className="group-hover:scale-110 transition-transform" />
-                  <span>n160228@rguktn.ac.in</span>
+                  <Mail
+                    size={18}
+                    className="group-hover:scale-110 transition-transform"
+                  />
+                  <span>ammannaidu.dev@gmail.com</span>
                 </div>
               </div>
 
@@ -142,11 +157,12 @@ export default function Footer() {
                   <div>
                     <p className="text-sm text-slate-400">Local Time</p>
                     <p className="text-white font-semibold">
-                      {currentTime.toLocaleTimeString('en-US', { 
-                        timeZone: 'Asia/Kolkata',
-                        hour: '2-digit', 
-                        minute: '2-digit'
-                      })} IST
+                      {currentTime.toLocaleTimeString("en-US", {
+                        timeZone: "Asia/Kolkata",
+                        hour: "2-digit",
+                        minute: "2-digit",
+                      })}{" "}
+                      IST
                     </p>
                   </div>
                 </div>
@@ -169,7 +185,9 @@ export default function Footer() {
                       className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-all group py-1"
                     >
                       <div className="w-1 h-1 bg-slate-500 rounded-full group-hover:w-2 group-hover:bg-cyan-400 transition-all"></div>
-                      <span className="group-hover:translate-x-1 transition-transform">{link.label}</span>
+                      <span className="group-hover:translate-x-1 transition-transform">
+                        {link.label}
+                      </span>
                     </a>
                   ))}
                 </div>
@@ -177,16 +195,20 @@ export default function Footer() {
 
               {/* Tech Highlight */}
               <div className="bg-gradient-to-r from-slate-800/30 to-slate-700/30 border border-slate-600/50 rounded-xl p-6 backdrop-blur-sm">
-                <h4 className="text-lg font-bold text-white mb-4">Currently Working With</h4>
+                <h4 className="text-lg font-bold text-white mb-4">
+                  Currently Working With
+                </h4>
                 <div className="flex flex-wrap gap-2">
-                  {['React', 'Node.js', 'TypeScript', 'AWS', 'MongoDB'].map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full border border-slate-600/50 hover:border-cyan-400/50 transition-colors"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                  {["Java", "Spring Boot", "SQL", "AWS", "React Js"].map(
+                    (tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full border border-slate-600/50 hover:border-cyan-400/50 transition-colors"
+                      >
+                        {tech}
+                      </span>
+                    )
+                  )}
                 </div>
               </div>
             </div>
@@ -197,8 +219,6 @@ export default function Footer() {
                 <Send size={20} className="text-cyan-400" />
                 Let&apos;s Connect
               </h4>
-              
-
 
               {/* Social Links */}
               <div className="pt-4">
@@ -209,10 +229,15 @@ export default function Footer() {
                       <a
                         key={social.label}
                         href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className={`p-3 bg-slate-800/50 border border-slate-700/50 rounded-xl text-slate-400 transition-all hover:scale-110 transform ${social.color} ${social.bg} group`}
                         title={social.label}
                       >
-                        <Icon size={20} className="group-hover:rotate-12 transition-transform" />
+                        <Icon
+                          size={20}
+                          className="group-hover:rotate-12 transition-transform"
+                        />
                       </a>
                     );
                   })}
@@ -226,7 +251,6 @@ export default function Footer() {
         <div className="border-t border-slate-800/50">
           <div className="max-w-6xl mx-auto px-6 py-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              
               <div className="flex items-center gap-6 text-slate-400 text-sm">
                 <span>© 2025 Ammannaidu. All rights reserved.</span>
               </div>
@@ -242,7 +266,10 @@ export default function Footer() {
           className="fixed bottom-8 right-8 p-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full shadow-lg hover:shadow-cyan-500/25 transition-all transform hover:scale-110 active:scale-95 z-50 group"
           title="Back to top"
         >
-          <ArrowUp size={20} className="group-hover:-translate-y-1 transition-transform" />
+          <ArrowUp
+            size={20}
+            className="group-hover:-translate-y-1 transition-transform"
+          />
         </button>
       )}
     </footer>

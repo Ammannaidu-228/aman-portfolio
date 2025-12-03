@@ -1,6 +1,6 @@
 'use client';
-
-import React, { useState, useEffect, useRef } from 'react';
+import Link from "next/link";
+import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { 
   Code2,
@@ -29,13 +29,13 @@ export default function About() {
       label: 'My Story', 
       icon: BookOpen,
       content: {
-        title: "From Curiosity to Code",
-        description: "My journey in software engineering began with a simple fascination for how things work. What started as tinkering with HTML pages has evolved into architecting complex distributed systems at Infosys, where I've spent 3+ years building scalable solutions that impact thousands of users.",
+        title: "From Civil Engineering to Code",
+        description: "My journey took an unconventional turn from Civil Engineering at IIIT Nuzvid to becoming a backend-focused Software Development Engineer. Over the past 4 years at Infosys, I've migrated 25+ legacy mainframe systems to modern microservices, designed 40+ scalable REST APIs, and worked on mission-critical systems for BNSF Railways and Mercedes-Benz.",
         highlights: [
-          { icon: Lightbulb, text: "Started coding during college with web development" },
-          { icon: Rocket, text: "Transitioned to enterprise systems at Infosys" },
-          { icon: Target, text: "Specialized in microservices and cloud architecture" },
-          { icon: Users, text: "Led teams and mentored junior developers" }
+          { icon: Lightbulb, text: "Graduated from IIIT Nuzvid with 8.5 CGPA in Civil Engineering" },
+          { icon: Rocket, text: "Built enterprise systems for Fortune 500 clients at Infosys" },
+          { icon: Target, text: "Specialized in Java, Spring Boot, and microservices architecture" },
+          { icon: Users, text: "Led code reviews and mentored developers on SOLID principles" }
         ]
       }
     },
@@ -44,13 +44,13 @@ export default function About() {
       label: 'Philosophy',
       icon: Brain,
       content: {
-        title: "Building Beyond Code",
-        description: "I believe great software isn't just about clean code—it's about solving real problems for real people. My approach combines technical excellence with user empathy, always asking 'How can this make someone's life better?' Whether it's optimizing a database query or designing a user interface, every decision matters.",
+        title: "Engineering Excellence & Innovation",
+        description: "I believe in writing clean, maintainable code that stands the test of time. My approach combines deep technical expertise with practical problem-solving—from modernizing legacy mainframe systems to building ML-powered applications. I'm driven by the challenge of transforming complex business requirements into elegant, scalable solutions.",
         highlights: [
-          { icon: Heart, text: "User-first mindset in every technical decision" },
-          { icon: Zap, text: "Performance and scalability as core principles" },
-          { icon: Globe, text: "Collaborative approach to complex challenges" },
-          { icon: Coffee, text: "Continuous learning and knowledge sharing" }
+          { icon: Heart, text: "Quality-first approach with 80%+ test coverage and code reviews" },
+          { icon: Zap, text: "Performance optimization reducing response times by 20-25%" },
+          { icon: Globe, text: "Cross-functional collaboration with architects, QA, and SMEs" },
+          { icon: Coffee, text: "Continuous learner with AWS, Azure, and Big Data certifications" }
         ]
       }
     },
@@ -59,23 +59,23 @@ export default function About() {
       label: 'Expertise',
       icon: Award,
       content: {
-        title: "Technical Excellence",
-        description: "With a strong foundation in full-stack development and systems design, I specialize in building robust, scalable applications. My experience spans from frontend React applications to backend microservices, with a particular focus on cloud-native architectures and DevOps practices.",
+        title: "Backend Engineering & System Design",
+        description: "Specialized in backend development with Java and Spring Boot, I've architected microservices handling high-volume traffic for Fortune 500 companies. My expertise spans legacy system modernization, REST API design, database optimization, and cloud-native deployments. I've successfully delivered 95% of projects on-time while maintaining 99.9% system uptime.",
         highlights: [
-          { icon: Code2, text: "Full-stack development with React, Node.js, and Java" },
-          { icon: Globe, text: "Cloud architecture on AWS, Azure, and GCP" },
-          { icon: Zap, text: "Microservices design and distributed systems" },
-          { icon: Target, text: "DevOps, CI/CD, and infrastructure automation" }
+          { icon: Code2, text: "Java, Spring Boot, Hibernate, JPA with 40+ production APIs" },
+          { icon: Globe, text: "AWS & Azure certified with hands-on cloud deployment experience" },
+          { icon: Zap, text: "Microservices, CI/CD pipelines, Docker, and Kubernetes" },
+          { icon: Target, text: "MySQL optimization, ETL automation, and data engineering" }
         ]
       }
     }
   ];
 
   const stats = [
-    { number: "15+", label: "Projects Delivered", icon: Rocket },
+    { number: "40+", label: "REST APIs Built", icon: Rocket },
     { number: "3+", label: "Years Experience", icon: Calendar },
-    { number: "8+", label: "Developers Mentored", icon: Users },
-    { number: "5", label: "Tech Certifications", icon: Award }
+    { number: "25+", label: "Systems Migrated", icon: Users },
+    { number: "3+", label: "Cloud Certifications", icon: Award }
   ];
 
   const currentTab = tabs[activeTab];
@@ -119,7 +119,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4 }}
           >
-            Passionate about creating impactful solutions through clean, efficient code and innovative thinking
+            Backend engineer passionate about building scalable systems, modernizing legacy applications, and solving complex technical challenges
           </motion.p>
         </motion.div>
 
@@ -254,17 +254,19 @@ export default function About() {
               I&apos;m always excited to collaborate on innovative projects and discuss new opportunities. 
               Whether you&apos;re looking to build a new product or optimize existing systems, let&apos;s connect!
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all overflow-hidden"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="relative flex items-center justify-center gap-2">
-                <Heart size={18} className="sm:w-5 sm:h-5" />
-                <span className="text-sm sm:text-base">Get In Touch</span>
-              </div>
-            </motion.button>
+<Link href="#contact" scroll={true}>
+  <motion.button
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all overflow-hidden"
+  >
+    <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+    <div className="relative flex items-center justify-center gap-2">
+      <Heart size={18} className="sm:w-5 sm:h-5" />
+      <span className="text-sm sm:text-base">Get In Touch</span>
+    </div>
+  </motion.button>
+</Link>
           </div>
         </motion.div>
       </div>

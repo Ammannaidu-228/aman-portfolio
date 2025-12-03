@@ -3,48 +3,51 @@ import { motion } from 'framer-motion';
 import { Calendar, MapPin, ExternalLink, Code, Database, Cloud, Zap } from 'lucide-react';
 
 export default function Experience() {
+
   const roles = [
     {
-      company: 'Service Based Co',
-      title: 'Software Developer',
-      period: 'Jul 2022 - Present',
+      company: 'Infosys',
+      title: 'Senior Systems Engineer',
+      period: '2023 - Present',
       duration: '2+ years',
-      location: 'Remote',
+      location: 'Vizag',
       type: 'Full-time',
-      companyUrl: '#',
-      description: 'Leading full-stack development initiatives, focusing on scalable MERN applications and cloud infrastructure optimization.',
+      companyUrl: 'https://www.infosys.com',
+      description: 'Leading enterprise-scale mainframe modernization and microservices architecture for BNSF Railways, one of North America\'s largest freight railroad networks.',
       bullets: [
-        'Architected and developed 8+ production-ready MERN stack applications serving 10k+ users',
-        'Optimized API performance by 40% through database indexing and query optimization',
-        'Implemented CI/CD pipelines using AWS CodePipeline, reducing deployment time by 60%',
-        'Mentored 3 junior developers and conducted code reviews for team of 8 engineers'
+        'Engineered migration of 25+ legacy mainframe modules to Java-based microservices, improving scalability and reducing maintenance overhead by 30%',
+        'Architected and developed 40+ REST APIs using Spring Boot, JPA, Hibernate, and optimized MySQL queries, resulting in 20-25% faster response times',
+        'Performed in-depth analysis of legacy workflows with SMEs and defined end-to-end migration strategies, reducing technical risks and rework by 15%',
+        'Collaborated cross-functionally with architects, QA, and product teams to maintain code quality and achieve 95% on-time delivery for major releases',
+        'Led code reviews and enforced SOLID principles, improving code consistency and maintainability; implemented JUnit test cases achieving 80%+ coverage'
       ],
-      skills: ['React', 'Node.js', 'MongoDB', 'AWS', 'Docker', 'TypeScript'],
+      skills: ['Java', 'Spring Boot', 'Microservices', 'MySQL', 'JPA/Hibernate', 'REST APIs', 'JUnit', 'SOLID Principles'],
       achievements: [
-        { icon: Zap, text: '40% API performance improvement' },
-        { icon: Cloud, text: '60% faster deployments' },
-        { icon: Code, text: '8+ production applications' }
+        { icon: Code, text: '40+ REST APIs developed' },
+        { icon: Zap, text: '25% faster response times' },
+        { icon: Database, text: '25+ modules migrated' }
       ]
     },
     {
-      company: 'Freelance',
-      title: 'Full-stack Developer',
-      period: '2023 - Present',
-      duration: '1+ year',
-      location: 'Global',
-      type: 'Contract',
-      companyUrl: '#',
-      description: 'Delivering custom web solutions for diverse clients across e-commerce, fintech, and SaaS domains.',
+      company: 'Infosys',
+      title: 'System Engineer',
+      period: '2022 - 2023',
+      duration: '1 year',
+      location: 'Hyderabad',
+      type: 'Full-time',
+      companyUrl: 'https://www.infosys.com',
+      description: 'Developed high-availability backend services and automated data workflows for Mercedes-Benz dealer management systems.',
       bullets: [
-        'Successfully delivered 15+ client projects with 100% client satisfaction rate',
-        'Integrated secure payment systems (Stripe, PayPal) for e-commerce platforms',
-        'Built responsive web applications using Next.js and modern design systems',
-        'Collaborated with international clients across different time zones'
+        'Developed high-availability backend services using Java, Spring Boot, and MySQL, improving system uptime to 99.9%',
+        'Designed and implemented RESTful APIs for dealer information retrieval, enabling seamless integration with React front-end applications',
+        'Automated daily ETL workflows and data ingestion using scheduled jobs, reducing manual effort by 90% and improving data reliability',
+        'Worked in Agile Scrum teams, contributing to sprint planning, peer reviews, and achieving consistent sprint velocity',
+        'Utilized Jenkins for CI/CD pipelines, JIRA for tracking, Postman for API testing, Git for version control, and JUnit for automated testing'
       ],
-      skills: ['Next.js', 'React', 'Stripe API', 'Tailwind CSS', 'PostgreSQL', 'Vercel'],
+      skills: ['Java', 'Spring Boot', 'MySQL', 'React', 'Jenkins', 'Git', 'Postman', 'JIRA', 'Agile/Scrum'],
       achievements: [
-        { icon: ExternalLink, text: '15+ successful projects' },
-        { icon: Database, text: '100% client satisfaction' }
+        { icon: Cloud, text: '99.9% system uptime' },
+        { icon: Database, text: '90% reduction in manual effort' }
       ]
     }
   ];
