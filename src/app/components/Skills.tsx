@@ -1,6 +1,5 @@
 'use client';
 import React, { useState, useEffect } from 'react';
-// Using Lucide React icons which are supported
 import { 
   Code, 
   Database, 
@@ -9,119 +8,61 @@ import {
   Star,
   TrendingUp,
   Award,
-  Terminal
+  Terminal,
+  Wrench,
+  Cpu
 } from 'lucide-react';
 
 export default function SDE2Skills() {
   const [activeCategory, setActiveCategory] = useState(0);
-  const [isVisible, setIsVisible] = useState(true);
 
   const skillCategories = [
     {
-      id: "frontend",
-      title: "Frontend",
+      id: "languages",
+      title: "Programming Languages",
       icon: Code,
       color: "from-blue-500 to-cyan-500",
       skills: [
-        { 
-          name: "React", 
-          logo: (
-            <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor">
-              <path d="M12 10.11c1.03 0 1.87.84 1.87 1.89s-.84 1.85-1.87 1.85-1.87-.82-1.87-1.85.84-1.89 1.87-1.89M7.37 20c.63.38 2.01-.2 3.6-1.7-.52-.59-1.03-1.23-1.51-1.9a22.7 22.7 0 01-2.4-.36c-.51 2.14-.32 3.61.31 3.96"/>
-            </svg>
-          ),
-          color: "text-cyan-400"
-        },
-        { 
-          name: "Next.js", 
-          logo: (
-            <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-              <div className="w-4 h-4 bg-black rounded-full flex items-center justify-center">
-                <div className="w-2 h-2 bg-white rounded-full"></div>
-              </div>
-            </div>
-          ),
-          color: "text-white"
-        },
-        { 
-          name: "TypeScript", 
-          logo: (
-            <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center text-white text-xs font-bold">
-              TS
-            </div>
-          ),
-          color: "text-blue-500"
-        }
+        { name: "Java", level: "Expert", years: "5+", color: "text-orange-600" },
+        { name: "Python", level: "Advanced", years: "3+", color: "text-blue-500" },
+        { name: "JavaScript", level: "Expert", years: "4+", color: "text-yellow-400" },
+        { name: "Go", level: "Intermediate", years: "1+", color: "text-cyan-400" }
+      ]
+    },
+    {
+      id: "frontend",
+      title: "Frontend Development", 
+      icon: Code,
+      color: "from-purple-500 to-pink-500",
+      skills: [
+        { name: "React.js", level: "Expert", years: "4+", color: "text-cyan-400" },
+        { name: "Redux", level: "Advanced", years: "3+", color: "text-purple-500" },
+        { name: "Axios", level: "Advanced", years: "3+", color: "text-purple-600" },
+        { name: "HTML5/CSS3", level: "Expert", years: "5+", color: "text-orange-500" }
       ]
     },
     {
       id: "backend",
-      title: "Backend", 
+      title: "Backend & Frameworks",
       icon: Database,
-      color: "from-green-500 to-teal-500",
+      color: "from-green-500 to-emerald-500",
       skills: [
-        { 
-          name: "Node.js", 
-          logo: (
-            <div className="w-6 h-6 bg-green-600 rounded flex items-center justify-center">
-              <div className="w-3 h-3 bg-white rounded-full"></div>
-            </div>
-          ),
-          color: "text-green-500"
-        },
-        { 
-          name: "Java", 
-          logo: (
-            <div className="w-6 h-6 bg-orange-500 rounded flex items-center justify-center text-white text-xs font-bold">
-              J
-            </div>
-          ),
-          color: "text-orange-500"
-        },
-        { 
-          name: "Spring Boot", 
-          logo: (
-            <div className="w-6 h-6 bg-green-400 rounded-full flex items-center justify-center">
-              <div className="w-2 h-2 bg-white rounded-full"></div>
-            </div>
-          ),
-          color: "text-green-400"
-        }
+        { name: "Spring Boot", level: "Expert", years: "5+", color: "text-green-500" },
+        { name: "Spring MVC", level: "Advanced", years: "4+", color: "text-green-400" },
+        { name: "Hibernate/JPA", level: "Expert", years: "5+", color: "text-gray-600" },
+        { name: "Flask", level: "Advanced", years: "2+", color: "text-gray-900" },
+        { name: "REST APIs", level: "Expert", years: "5+", color: "text-blue-500" },
+        { name: "Microservices", level: "Advanced", years: "3+", color: "text-blue-400" }
       ]
     },
     {
       id: "database",
-      title: "Database",
-      icon: Terminal,
-      color: "from-purple-500 to-pink-500",
+      title: "Databases",
+      icon: Database,
+      color: "from-yellow-500 to-orange-500",
       skills: [
-        { 
-          name: "MongoDB", 
-          logo: (
-            <div className="w-6 h-6 bg-green-500 rounded flex items-center justify-center text-white text-xs font-bold">
-              M
-            </div>
-          ),
-          color: "text-green-500"
-        },
-        { 
-          name: "PostgreSQL", 
-          logo: (
-            <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center text-white text-xs font-bold">
-              P
-            </div>
-          ),
-          color: "text-blue-600"
-        },
-        { 
-          name: "Python", 
-          logo: (
-            <div className="w-6 h-6 bg-yellow-500 rounded flex items-center justify-center text-white text-xs font-bold">
-              Py
-            </div>
-          ),
-          color: "text-yellow-500"
-        }
+        { name: "MySQL", level: "Expert", years: "5+", color: "text-blue-600" },
+        { name: "MongoDB", level: "Advanced", years: "2+", color: "text-green-500" }
       ]
     },
     {
@@ -130,41 +71,53 @@ export default function SDE2Skills() {
       icon: Cloud,
       color: "from-orange-500 to-red-500",
       skills: [
-        { 
-          name: "AWS", 
-          logo: (
-            <div className="w-6 h-6 bg-orange-400 rounded flex items-center justify-center text-white text-xs font-bold">
-              AWS
-            </div>
-          ),
-          color: "text-orange-400"
-        },
-        { 
-          name: "Docker", 
-          logo: (
-            <div className="w-6 h-6 bg-blue-400 rounded flex items-center justify-center text-white text-xs font-bold">
-              D
-            </div>
-          ),
-          color: "text-blue-400"
-        },
-        { 
-          name: "Kubernetes", 
-          logo: (
-            <div className="w-6 h-6 bg-blue-500 rounded flex items-center justify-center text-white text-xs font-bold">
-              K8s
-            </div>
-          ),
-          color: "text-blue-500"
-        }
+        { name: "AWS (EC2, S3, Lambda)", level: "Advanced", years: "3+", color: "text-orange-500" },
+        { name: "Azure", level: "Basic", years: "1+", color: "text-blue-500" },
+        { name: "Docker", level: "Advanced", years: "3+", color: "text-blue-500" },
+        { name: "Kubernetes", level: "Basic", years: "1+", color: "text-blue-600" },
+        { name: "Jenkins (CI/CD)", level: "Advanced", years: "3+", color: "text-red-500" }
+      ]
+    },
+    {
+      id: "tools",
+      title: "Tools & Technologies",
+      icon: Wrench,
+      color: "from-indigo-500 to-purple-500",
+      skills: [
+        { name: "Git/GitHub", level: "Expert", years: "5+", color: "text-gray-800" },
+        { name: "Postman", level: "Expert", years: "5+", color: "text-orange-500" },
+        { name: "Swagger", level: "Advanced", years: "4+", color: "text-green-500" },
+        { name: "JIRA", level: "Advanced", years: "4+", color: "text-blue-600" },
+        { name: "IntelliJ IDEA", level: "Expert", years: "5+", color: "text-purple-600" },
+        { name: "VS Code", level: "Expert", years: "4+", color: "text-blue-500" },
+        { name: "Resilience4j", level: "Advanced", years: "2+", color: "text-teal-500" },
+        { name: "JWT", level: "Expert", years: "3+", color: "text-purple-500" },
+        { name: "Razorpay", level: "Advanced", years: "1+", color: "text-blue-600" }
+      ]
+    },
+    {
+      id: "ml",
+      title: "Data Science & ML",
+      icon: Cpu,
+      color: "from-pink-500 to-rose-500",
+      skills: [
+        { name: "Scikit-learn", level: "Advanced", years: "2+", color: "text-orange-500" },
+        { name: "Pandas", level: "Advanced", years: "2+", color: "text-blue-700" },
+        { name: "NumPy", level: "Advanced", years: "2+", color: "text-blue-500" }
       ]
     }
   ];
 
   const achievements = [
-    { icon: Code, label: "Projects", value: "25+", color: "text-blue-400" },
-    { icon: Star, label: "Tech Stack", value: "15+", color: "text-cyan-400" },
-    { icon: TrendingUp, label: "Experience", value: "5+ Years", color: "text-teal-400" }
+    { icon: Code, label: "Projects", value: "5+", color: "text-blue-400" },
+    { icon: Star, label: "Tech Stack", value: "30+", color: "text-cyan-400" },
+    { icon: TrendingUp, label: "Experience", value: "3+ Years", color: "text-teal-400" }
+  ];
+
+  const certifications = [
+    { name: "AWS Certified Cloud Practitioner", icon: Cloud, color: "text-orange-500" },
+    { name: "Azure Certified Developer Associate", icon: Cloud, color: "text-blue-500" },
+    { name: "Infosys Certified Big Data Developer", icon: Database, color: "text-green-500" }
   ];
 
   // Auto-rotate categories
@@ -174,7 +127,7 @@ export default function SDE2Skills() {
     }, 4000);
     
     return () => clearInterval(interval);
-  }, [skillCategories.length]);
+  }, []);
 
   const currentCategory = skillCategories[activeCategory];
 
@@ -224,7 +177,7 @@ export default function SDE2Skills() {
 
           {/* Achievement Stats */}
           <div className="flex flex-wrap justify-center gap-8">
-            {achievements.map((achievement, index) => {
+            {achievements.map((achievement) => {
               const Icon = achievement.icon;
               return (
                 <div
@@ -245,7 +198,7 @@ export default function SDE2Skills() {
         </div>
 
         {/* Skills Showcase */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           
           {/* Left Side - Category Navigation */}
           <div className="space-y-4">
@@ -289,7 +242,7 @@ export default function SDE2Skills() {
           {/* Right Side - Active Skills Display */}
           <div className="relative">
             {/* Background Card */}
-            <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 backdrop-blur-sm">
+            <div className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8 backdrop-blur-sm min-h-[500px]">
               <div
                 key={activeCategory}
                 className="transition-all duration-500"
@@ -306,32 +259,35 @@ export default function SDE2Skills() {
                 </div>
 
                 {/* Skills List */}
-                <div className="space-y-6">
+                <div className="space-y-4">
                   {currentCategory.skills.map((skill, index) => (
                     <div
                       key={skill.name}
-                      className="flex items-center gap-4 p-4 bg-slate-700/30 rounded-xl hover:bg-slate-700/50 transition-all group hover:scale-105 cursor-pointer"
+                      className="flex items-center justify-between p-4 bg-slate-700/30 rounded-xl hover:bg-slate-700/50 transition-all group hover:scale-105 cursor-pointer"
+                      style={{animationDelay: `${index * 0.1}s`}}
                     >
-                      {/* Technology Logo */}
-                      <div className="p-3 bg-slate-600/50 rounded-xl group-hover:scale-110 transition-transform">
-                        <div className={`${skill.color}`}>
-                          {skill.logo}
+                      <div className="flex items-center gap-4">
+                        {/* Skill Icon */}
+                        <div className={`w-10 h-10 rounded-lg ${skill.color} bg-opacity-10 flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                          <div className={`w-2 h-2 rounded-full ${skill.color.replace('text-', 'bg-')}`}></div>
+                        </div>
+                        
+                        {/* Skill Info */}
+                        <div>
+                          <h4 className="font-bold text-white text-lg group-hover:text-cyan-400 transition-colors">
+                            {skill.name}
+                          </h4>
+                          <p className="text-sm text-slate-400">
+                            {skill.level} • {skill.years} experience
+                          </p>
                         </div>
                       </div>
                       
-                      {/* Technology Info */}
-                      <div className="flex-1">
-                        <h4 className="font-bold text-white text-lg group-hover:text-cyan-400 transition-colors">
-                          {skill.name}
-                        </h4>
-                        <p className="text-sm text-slate-400 group-hover:text-slate-300 transition-colors">
-                          Production Ready
-                        </p>
-                      </div>
-                      
-                      {/* Hover Effect Indicator */}
-                      <div className="opacity-0 group-hover:opacity-100 transition-opacity">
-                        <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                      {/* Proficiency Indicator */}
+                      <div className="flex gap-1">
+                        {[...Array(skill.level === 'Expert' ? 5 : skill.level === 'Advanced' ? 4 : 3)].map((_, i) => (
+                          <div key={i} className={`w-1.5 h-6 rounded-full ${skill.color.replace('text-', 'bg-')} opacity-80`}></div>
+                        ))}
                       </div>
                     </div>
                   ))}
@@ -351,6 +307,37 @@ export default function SDE2Skills() {
                 />
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* Certifications Section */}
+        <div className="mt-20">
+          <div className="text-center mb-10">
+            <h3 className="text-3xl font-bold text-white mb-4">
+              Professional Certifications
+            </h3>
+            <p className="text-slate-400">Validated expertise from industry leaders</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {certifications.map((cert) => {
+              const Icon = cert.icon;
+              return (
+                <div
+                  key={cert.name}
+                  className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all group hover:scale-105"
+                >
+                  <div className={`p-3 rounded-lg bg-slate-700/50 inline-block mb-4 group-hover:scale-110 transition-transform`}>
+                    <Icon size={24} className={cert.color} />
+                  </div>
+                  <h4 className="text-white font-semibold mb-2">{cert.name}</h4>
+                  <div className="flex items-center gap-2 text-sm text-slate-400">
+                    <Award size={14} className="text-cyan-400" />
+                    <span>Certified</span>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
 

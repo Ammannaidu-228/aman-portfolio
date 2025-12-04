@@ -5,22 +5,22 @@ import { Github, Linkedin, Mail, MapPin, Code2, ArrowRight, Star, Zap, Download,
 
 export default function Hero() {
   const typewriterTexts = [
-    "Building scalable web applications",
-    "Architecting cloud-native solutions", 
-    "Crafting exceptional user experiences",
-    "Optimizing system performance"
+    "Engineering microservices at scale",
+    "Migrating legacy systems to modern architectures", 
+    "Building high-availability backend solutions",
+    "Crafting seamless full-stack experiences"
   ];
 
   const techStack = [
-    { name: "React / Next.js", desc: "Modern Frontend", icon: "⚛️", color: "from-blue-400 to-cyan-400" },
-    { name: "System Design", desc: "Scalable Architecture", icon: "🏗️", color: "from-purple-400 to-pink-400" },
-    { name: "Cloud Native", desc: "AWS / GCP / Azure", icon: "☁️", color: "from-green-400 to-blue-400" },
-    { name: "Full Stack", desc: "End-to-End Solutions", icon: "🚀", color: "from-orange-400 to-red-400" },
+    { name: "Spring Boot", desc: "Microservices & REST APIs", icon: "🍃", color: "from-green-400 to-emerald-400" },
+    { name: "React / Redux", desc: "Modern Frontend", icon: "⚛️", color: "from-blue-400 to-cyan-400" },
+    { name: "AWS & Azure", desc: "Cloud Infrastructure", icon: "☁️", color: "from-purple-400 to-blue-400" },
+    { name: "System Migration", desc: "Legacy to Modern", icon: "🔄", color: "from-orange-400 to-pink-400" },
   ];
 
   const achievements = [
-    { number: "5+", label: "Certifications" },
     { number: "3+", label: "Years Experience" },
+    { number: "5+", label: "AWS & Azure Certs" },
   ];
 
   const [typedText, setTypedText] = useState('');
@@ -111,7 +111,7 @@ export default function Hero() {
                     </h1>
                     <div className="flex items-center gap-2 text-slate-400 text-sm">
                       <MapPin size={12} className="text-blue-400 flex-shrink-0" />
-                      <span className="truncate">Visakhapatnam, IN</span>
+                      <span className="truncate">Vizag, India</span>
                     </div>
                   </div>
                 </div>
@@ -126,8 +126,8 @@ export default function Hero() {
                 <div className="flex gap-2">
                   {[
                     { Icon: Github, href: "https://github.com/Ammannaidu-228", label: "GitHub" },
-                    { Icon: Linkedin, href: "#", label: "LinkedIn" },
-                    { Icon: Mail, href: "#", label: "Email" },
+                    { Icon: Linkedin, href: "https://www.linkedin.com/in/ammannaidu-gollapalli-4591a639b", label: "LinkedIn" },
+                    { Icon: Mail, href: "ammannaidu.dev@gmail.com", label: "Email" },
                   ].map(({ Icon, href, label }) => (
                     <a 
                       key={label}
@@ -275,8 +275,8 @@ export default function Hero() {
             <div className="flex gap-4 mb-8">
               {[
                 { Icon: Github, href: "https://github.com/Ammannaidu-228", label: "GitHub", color: "hover:text-purple-400" },
-                { Icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-blue-400" },
-                { Icon: Mail, href: "#", label: "Email", color: "hover:text-green-400" },
+                { Icon: Linkedin, href: "https://www.linkedin.com/in/ammannaidu-gollapalli-4591a639b/", label: "LinkedIn", color: "hover:text-blue-400" },
+                { Icon: Mail, href: "ammannaidu.dev@gmail.com", label: "Email", color: "hover:text-green-400" },
               ].map(({ Icon, href, label, color }) => (
                 <a 
                   key={label}
@@ -296,7 +296,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4 mb-8">
               <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/60 border border-slate-700">
                 <MapPin size={18} className="text-blue-400" />
-                <span className="text-slate-300">Visakhapatnam, India</span>
+                <span className="text-slate-300">Vizag, India</span>
               </div>
               <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-emerald-900/20 border border-emerald-700/50">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
