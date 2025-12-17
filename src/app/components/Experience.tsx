@@ -13,7 +13,6 @@ export default function Experience() {
       location: 'Vizag',
       type: 'Full-time',
       companyUrl: 'https://www.infosys.com',
-      description: 'Leading enterprise-scale mainframe modernization and microservices architecture for BNSF Railways, one of North America\'s largest freight railroad networks.',
       bullets: [
         'Engineered migration of 25+ legacy mainframe modules to Java-based microservices, improving scalability and reducing maintenance overhead by 30%',
         'Architected and developed 40+ REST APIs using Spring Boot, JPA, Hibernate, and optimized MySQL queries, resulting in 20-25% faster response times',
@@ -36,7 +35,6 @@ export default function Experience() {
       location: 'Hyderabad',
       type: 'Full-time',
       companyUrl: 'https://www.infosys.com',
-      description: 'Developed high-availability backend services and automated data workflows for Mercedes-Benz dealer management systems.',
       bullets: [
         'Developed high-availability backend services using Java, Spring Boot, and MySQL, improving system uptime to 99.9%',
         'Designed and implemented RESTful APIs for dealer information retrieval, enabling seamless integration with React front-end applications',
@@ -126,9 +124,7 @@ export default function Experience() {
                       )}
                     </div>
                     
-                    <p className="text-muted text-sm leading-relaxed mb-4">
-                      {role.description}
-                    </p>
+
                   </div>
                   
                   <div className="lg:text-right space-y-2">
