@@ -19,26 +19,26 @@
 }
 
 .dark {
-  --bg: #071029;
+  --bg: #000000;
   --muted: #9ca3af;
-  --card: #071827;
-  --glass: rgba(10,23,36,0.5);
-  --text: #e6eef8;
-  --accent: #8b5cf6;
-  --bg-skill-card: #1e293b;
-  --text-skill: #f1f5f9;
-  --icon-color: #38bdf8;
-  --icon-hover: #0ea5e9;
-  --bg-skill-section: #121212;
-  --text-skill: #fff;
+  --card: #1a1a1a;
+  --glass: rgba(0,0,0,0.6);
+  --text: #ffffff;
+  --accent: #ffffff;
+  --bg-skill-card: #1a1a1a;
+  --text-skill: #ffffff;
+  --icon-color: #ffffff;
+  --icon-hover: #cccccc;
+  --bg-skill-section: #000000;
+  --text-skill: #ffffff;
   --shadow-skill: rgba(255, 255, 255, 0.1);
 }
 
 /* global */
 html,body,#__next{height:100%}
 body{
-  background: radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,0.06), transparent),
-              radial-gradient(900px 400px at 90% 90%, rgba(6,182,212,0.04), transparent),
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(255,255,255,0.05), transparent),
+              radial-gradient(900px 400px at 90% 90%, rgba(200,200,200,0.03), transparent),
               var(--bg);
   color: var(--text);
   transition: background .28s ease, color .28s ease;
@@ -67,9 +67,9 @@ body{
   @apply inline-flex items-center justify-center rounded-md px-4 py-2 font-semibold shadow-sm transition-transform;
 }
 .btn-primary {
-  background: linear-gradient(90deg,var(--accent),var(--accent2, #06b6d4));
-  color: white;
-  box-shadow: 0 6px 18px rgba(124,58,237,0.12);
+  background: linear-gradient(90deg, #ffffff, #d1d5db);
+  color: #000000;
+  box-shadow: 0 6px 18px rgba(255,255,255,0.12);
 }
 .btn-ghost {
   background: transparent;

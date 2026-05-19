@@ -102,7 +102,7 @@ export default function Navbar() {
   const mobileMenu = (
     <div
       // full-screen overlay
-      className={`fixed inset-0 bg-slate-950/98 backdrop-blur-xl transition-all duration-200 ${
+      className={`fixed inset-0 bg-black/99 backdrop-blur-xl transition-all duration-200 ${
         isOpen ? 'opacity-100 visible pointer-events-auto' : 'opacity-0 invisible pointer-events-none'
       }`}
       style={{ zIndex: 99999 }}
@@ -122,8 +122,8 @@ export default function Navbar() {
                 }}
                 className={`flex items-center gap-3 px-4 py-4 rounded-xl transition-all duration-300 ${
                   activeSection === item.name.toLowerCase()
-                    ? 'bg-blue-500/10 border border-blue-500/30 text-white'
-                    : 'text-slate-300 hover:text-white hover:bg-slate-800/50 border border-transparent'
+                    ? 'bg-white/15 border border-white/40 text-white'
+                    : 'text-gray-400 hover:text-white hover:bg-gray-900/40 border border-transparent'
                 }`}
                 style={{
                   animationDelay: `${index * 50}ms`,
@@ -134,7 +134,7 @@ export default function Navbar() {
                 <span className="font-semibold text-lg">{item.name}</span>
 
                 {activeSection === item.name.toLowerCase() && (
-                  <div className="ml-auto w-2 h-2 bg-cyan-400 rounded-full flex-shrink-0" />
+                  <div className="ml-auto w-2 h-2 bg-white rounded-full flex-shrink-0" />
                 )}
               </a>
             );
@@ -158,7 +158,7 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-slate-950/95 backdrop-blur-xl border-b border-blue-500/20 shadow-lg'
+            ? 'bg-black backdrop-blur-xl border-b border-gray-700/30 shadow-lg shadow-black/80'
             : 'bg-transparent'
         }`}
       >
@@ -174,14 +174,14 @@ export default function Navbar() {
               className="flex items-center gap-2"
             >
               <div className="relative">
-                <div className="w-10 h-10 bg-gradient-to-br from-blue-500 via-cyan-500 to-teal-500 rounded-lg flex items-center justify-center hover:rotate-3 transition-transform duration-300">
-                  <div className="absolute inset-0 opacity-20">
-                    <div className="absolute top-1 left-1 w-2 h-2 border-t border-l border-white/40" />
-                    <div className="absolute top-1 right-1 w-2 h-2 border-t border-r border-white/40" />
-                    <div className="absolute bottom-1 left-1 w-2 h-2 border-b border-l border-white/40" />
-                    <div className="absolute bottom-1 right-1 w-2 h-2 border-b border-r border-white/40" />
+                <div className="w-10 h-10 bg-gradient-to-br from-white via-gray-300 to-gray-500 rounded-lg flex items-center justify-center hover:rotate-3 transition-transform duration-300">
+                  <div className="absolute inset-0 opacity-30">
+                    <div className="absolute top-1 left-1 w-2 h-2 border-t border-l border-black/30" />
+                    <div className="absolute top-1 right-1 w-2 h-2 border-t border-r border-black/30" />
+                    <div className="absolute bottom-1 left-1 w-2 h-2 border-b border-l border-black/30" />
+                    <div className="absolute bottom-1 right-1 w-2 h-2 border-b border-r border-black/30" />
                   </div>
-                  <Terminal className="text-white relative z-10 w-5 h-5" />
+                  <Terminal className="text-black relative z-10 w-5 h-5" />
                 </div>
               </div>
 
@@ -202,8 +202,8 @@ export default function Navbar() {
                     }}
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                       activeSection === item.name.toLowerCase()
-                        ? 'text-white bg-blue-500/10 border border-blue-500/30'
-                        : 'text-slate-300 hover:text-white hover:bg-slate-800/50'
+                        ? 'text-white bg-white/15 border border-white/40'
+                        : 'text-gray-400 hover:text-white hover:bg-gray-900/50'
                     }`}
                   >
                     <Icon className="w-4 h-4" />
@@ -216,7 +216,7 @@ export default function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen((s) => !s)}
-              className="md:hidden w-10 h-10 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg flex items-center justify-center text-slate-300 hover:text-white transition-all duration-300 active:scale-95"
+              className="md:hidden w-10 h-10 bg-gray-900/60 backdrop-blur-sm border border-gray-600/60 rounded-lg flex items-center justify-center text-gray-300 hover:text-white hover:bg-gray-800/80 transition-all duration-300 active:scale-95"
               aria-label="Toggle menu"
               style={{ zIndex: 100000 }} // keep button above everything while toggling
             >
@@ -228,19 +228,19 @@ export default function Navbar() {
 
       {/* Desktop Floating Dots Navigation */}
       <div className="hidden lg:block fixed right-8 top-1/2 -translate-y-1/2 z-40">
-        <div className="flex flex-col gap-3 bg-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-3">
+        <div className="flex flex-col gap-3 bg-black/60 backdrop-blur-sm border border-gray-700/40 rounded-2xl p-3">
           {NAV_ITEMS.map(item => (
             <div key={item.name} className="group relative">
               <button
                 onClick={() => handleNavClick(item.name, item.href)}
                 className={`block w-3 h-3 rounded-full transition-all duration-300 border hover:scale-125 ${
                   activeSection === item.name.toLowerCase()
-                    ? 'bg-cyan-400 border-cyan-400 shadow-lg shadow-cyan-400/50'
-                    : 'bg-slate-600 border-slate-500 hover:bg-blue-400 hover:border-blue-400'
+                    ? 'bg-white border-white shadow-lg shadow-white/50'
+                    : 'bg-gray-600 border-gray-500 hover:bg-gray-300 hover:border-gray-300'
                 }`}
                 aria-label={`Navigate to ${item.name}`}
               />
-              <div className="absolute right-6 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap border border-slate-700 pointer-events-none">
+              <div className="absolute right-6 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-slate-800 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap border border-gray-700 pointer-events-none">
                 {item.name}
               </div>
             </div>
@@ -250,7 +250,7 @@ export default function Navbar() {
 
       {/* Progress Bar */}
       <div
-        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 origin-left z-[60]"
+        className="fixed top-0 left-0 right-0 h-1 bg-gradient-to-r from-white via-gray-300 to-gray-500 origin-left z-[60]"
         style={{
           transform: `scaleX(${scrollProgress})`,
           transition: 'transform 0.1s ease-out'

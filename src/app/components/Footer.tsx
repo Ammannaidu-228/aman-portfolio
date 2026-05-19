@@ -49,14 +49,14 @@ export default function Footer() {
       label: "GitHub",
       href: "https://github.com/Ammannaidu-228",
       color: "hover:text-white",
-      bg: "hover:bg-slate-700",
+      bg: "hover:bg-gray-700",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       href: "https://www.linkedin.com/in/ammannaidu-gollapalli-4591a639b/",
-      color: "hover:text-blue-400",
-      bg: "hover:bg-blue-500/20",
+      color: "hover:text-gray-300",
+      bg: "hover:bg-gray-600/20",
     },
   ];
 
@@ -76,12 +76,12 @@ export default function Footer() {
   };
 
   return (
-    <footer id="contact" className="relative bg-gradient-to-b from-slate-950 via-slate-900 to-black overflow-hidden">
+    <footer id="contact" className="relative bg-black overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-blue-500/3 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-cyan-500/3 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/3 rounded-full blur-3xl" />
+        <div className="absolute top-20 left-20 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-gray-400/3 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gray-500/3 rounded-full blur-3xl" />
       </div>
 
       {/* Animated Grid */}
@@ -90,7 +90,7 @@ export default function Footer() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.4) 1px, transparent 0)",
+              "radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.4) 1px, transparent 0)",
             backgroundSize: "50px 50px",
           }}
         />
@@ -105,14 +105,14 @@ export default function Footer() {
               {/* Logo/Brand */}
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl">
-                    <Code2 size={28} className="text-white" />
+                  <div className="p-2 bg-gradient-to-r from-white to-gray-400 rounded-xl">
+                    <Code2 size={28} className="text-black" />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-white">
                       Ammannaidu Gollapalli
                     </h3>
-                    <p className="text-cyan-400 font-semibold">
+                    <p className="text-gray-300 font-semibold">
                       Software Engineer
                     </p>
                   </div>

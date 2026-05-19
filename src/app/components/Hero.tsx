@@ -27,25 +27,25 @@ export default function Hero() {
       name: "Spring Boot",
       desc: "Microservices & REST APIs",
       icon: "🍃",
-      color: "from-green-400 to-emerald-400",
+      color: "from-white to-gray-300",
     },
     {
       name: "React / Redux",
       desc: "Modern Frontend",
       icon: "⚛️",
-      color: "from-blue-400 to-cyan-400",
+      color: "from-gray-200 to-gray-400",
     },
     {
       name: "AWS & Azure",
       desc: "Cloud Infrastructure",
       icon: "☁️",
-      color: "from-purple-400 to-blue-400",
+      color: "from-gray-300 to-gray-500",
     },
     {
       name: "System Migration",
       desc: "Legacy to Modern",
       icon: "🔄",
-      color: "from-orange-400 to-pink-400",
+      color: "from-gray-400 to-gray-600",
     },
   ];
 
@@ -95,13 +95,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900"
+      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-black via-slate-900 to-black"
     >
-      {/* Background Effects */}
+      {/* Background Effects - Black & White Gradients */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.15),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.1),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_40%,rgba(6,182,212,0.1),transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(255,255,255,0.08),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_40%_40%,rgba(200,200,200,0.03),transparent_70%)]" />
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-20 lg:py-0">
@@ -110,17 +110,17 @@ export default function Hero() {
           <div className="lg:hidden w-full space-y-6">
             {/* Profile Card - Compact & Modern */}
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-cyan-500/20 rounded-3xl blur-xl"></div>
-              <div className="relative bg-slate-900/90 backdrop-blur-xl border border-slate-700/50 rounded-3xl p-6 overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-white/10 via-gray-400/10 to-gray-300/10 rounded-3xl blur-xl"></div>
+              <div className="relative bg-slate-950/95 backdrop-blur-xl border border-gray-700/40 rounded-3xl p-6 overflow-hidden">
                 {/* Top accent bar */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500"></div>
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-white via-gray-400 to-gray-600"></div>
 
                 <div className="flex items-start gap-4 mb-6">
                   {/* Profile Image */}
                   <div className="relative flex-shrink-0">
-                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-2xl blur opacity-75"></div>
-                    <div className="relative w-20 h-24 rounded-xl overflow-hidden border-2 border-slate-700 bg-slate-800">
-                      <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-white via-gray-400 to-gray-600 rounded-2xl blur opacity-60"></div>
+                    <div className="relative w-20 h-24 rounded-xl overflow-hidden border-2 border-gray-600 bg-slate-800">
+                      <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-700 flex items-center justify-center text-white text-2xl font-bold">
                         <img
                           src="/images/profile-light.jpg"
                           alt="Ammannaidu Gollapalli"
@@ -128,27 +128,27 @@ export default function Hero() {
                         />
                       </div>
                     </div>
-                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-green-400 rounded-full border-2 border-slate-900 animate-pulse"></div>
+                    <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-white rounded-full border-2 border-slate-900 animate-pulse"></div>
                   </div>
 
                   {/* Name & Title */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-2">
-                      <Zap size={14} className="text-blue-400 flex-shrink-0" />
-                      <span className="text-blue-400 font-semibold text-xs uppercase tracking-wider">
+                      <Zap size={14} className="text-gray-300 flex-shrink-0" />
+                      <span className="text-gray-300 font-semibold text-xs uppercase tracking-wider">
                         Software Engineer
                       </span>
                     </div>
                     <h1 className="text-2xl font-bold leading-tight mb-1">
                       <span className="text-white block">Ammannaidu</span>
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-gray-400 to-white">
                         Gollapalli
                       </span>
                     </h1>
-                    <div className="flex items-center gap-2 text-slate-400 text-sm">
+                    <div className="flex items-center gap-2 text-gray-400 text-sm">
                       <MapPin
                         size={12}
-                        className="text-blue-400 flex-shrink-0"
+                        className="text-gray-300 flex-shrink-0"
                       />
                       <span className="truncate">Vizag, India</span>
                     </div>
@@ -156,9 +156,9 @@ export default function Hero() {
                 </div>
 
                 {/* Status Badge */}
-                <div className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 mb-4">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-300 text-sm font-medium">
+                <div className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 border border-white/20 mb-4">
+                  <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  <span className="text-gray-200 text-sm font-medium">
                     Available for opportunities
                   </span>
                 </div>
@@ -187,9 +187,9 @@ export default function Hero() {
                       href={href}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-blue-500/50 transition-all duration-300 active:scale-95"
+                      className="flex-1 flex items-center justify-center gap-2 p-3 rounded-xl bg-slate-800/40 border border-gray-700/60 hover:border-white/40 hover:bg-slate-700/40 transition-all duration-300 active:scale-95"
                     >
-                      <Icon size={18} className="text-slate-300" />
+                      <Icon size={18} className="text-gray-300" />
                     </a>
                   ))}
                 </div>
@@ -198,17 +198,17 @@ export default function Hero() {
 
             {/* Typewriter Card */}
             <div className="relative">
-              <div className="absolute inset-0 bg-blue-500/10 rounded-2xl blur-xl"></div>
-              <div className="relative bg-slate-900/70 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-4 overflow-hidden">
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500"></div>
+              <div className="absolute inset-0 bg-white/5 rounded-2xl blur-xl"></div>
+              <div className="relative bg-slate-900/60 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-4 overflow-hidden">
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-white via-gray-400 to-gray-700"></div>
                 <div className="flex items-start gap-3">
                   <Code2
-                    className="text-blue-400 flex-shrink-0 mt-1"
+                    className="text-gray-300 flex-shrink-0 mt-1"
                     size={20}
                   />
-                  <p className="text-base text-slate-200 font-medium leading-relaxed">
+                  <p className="text-base text-gray-200 font-medium leading-relaxed">
                     {typedText}
-                    <span className="text-blue-400 ml-1 animate-pulse">|</span>
+                    <span className="text-gray-400 ml-1 animate-pulse">|</span>
                   </p>
                 </div>
               </div>
@@ -218,12 +218,12 @@ export default function Hero() {
             <div className="grid grid-cols-2 gap-3">
               {achievements.map((achievement) => (
                 <div key={achievement.label} className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <div className="relative bg-slate-900/70 backdrop-blur-sm border border-slate-700/50 rounded-xl p-4 text-center hover:border-blue-500/50 transition-all duration-300">
-                    <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-1">
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-gray-400/10 rounded-xl blur opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="relative bg-slate-900/60 backdrop-blur-sm border border-gray-700/50 rounded-xl p-4 text-center hover:border-gray-400/50 transition-all duration-300">
+                    <div className="text-3xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent mb-1">
                       {achievement.number}
                     </div>
-                    <div className="text-xs text-slate-400 uppercase tracking-wide">
+                    <div className="text-xs text-gray-400 uppercase tracking-wide">
                       {achievement.label}
                     </div>
                   </div>
@@ -233,11 +233,11 @@ export default function Hero() {
 
             {/* Tech Focus - Compact */}
             <div className="relative">
-              <div className="absolute inset-0 bg-purple-500/10 rounded-2xl blur-xl"></div>
-              <div className="relative bg-slate-900/70 backdrop-blur-md border border-slate-700/50 rounded-2xl p-4 overflow-hidden">
+              <div className="absolute inset-0 bg-gray-500/5 rounded-2xl blur-xl"></div>
+              <div className="relative bg-slate-900/60 backdrop-blur-md border border-gray-700/50 rounded-2xl p-4 overflow-hidden">
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 rounded-lg bg-blue-500/20">
-                    <Code2 className="text-blue-400" size={18} />
+                  <div className="p-2 rounded-lg bg-white/10">
+                    <Code2 className="text-gray-300" size={18} />
                   </div>
                   <h3 className="text-white font-bold text-sm">
                     Current Focus
@@ -251,7 +251,7 @@ export default function Hero() {
                     >
                       {techStack[currentTech].name}
                     </p>
-                    <p className="text-slate-400 text-xs">
+                    <p className="text-gray-400 text-xs">
                       {techStack[currentTech].desc}
                     </p>
                   </div>
@@ -262,7 +262,7 @@ export default function Hero() {
             {/* CTA Buttons - Stacked */}
             <div className="space-y-3">
               <Link href="#experience">
-                <button className="w-full group relative px-6 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-xl text-white font-semibold flex items-center justify-center gap-3 overflow-hidden shadow-lg shadow-blue-500/25 active:scale-95 transition-transform">
+                <button className="w-full group relative px-6 py-4 bg-gradient-to-r from-white via-gray-300 to-gray-400 rounded-xl text-black font-semibold flex items-center justify-center gap-3 overflow-hidden shadow-lg shadow-gray-400/30 active:scale-95 transition-transform">
                   <Star size={20} />
                   <span>View My Work</span>
                   <ArrowRight
@@ -274,29 +274,29 @@ export default function Hero() {
             </div>
 
             {/* Code Preview - Compact */}
-            <div className="bg-slate-950/90 backdrop-blur-md border border-slate-700/50 rounded-2xl p-4 font-mono text-xs overflow-hidden">
+            <div className="bg-slate-950/95 backdrop-blur-md border border-gray-700/50 rounded-2xl p-4 font-mono text-xs overflow-hidden">
               <div className="flex gap-1.5 mb-3">
-                <div className="w-2.5 h-2.5 bg-red-500 rounded-full"></div>
-                <div className="w-2.5 h-2.5 bg-yellow-500 rounded-full"></div>
-                <div className="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
+                <div className="w-2.5 h-2.5 bg-gray-400 rounded-full"></div>
+                <div className="w-2.5 h-2.5 bg-gray-500 rounded-full"></div>
+                <div className="w-2.5 h-2.5 bg-gray-600 rounded-full"></div>
               </div>
-              <div className="space-y-1 text-slate-300">
+              <div className="space-y-1 text-gray-400">
                 <p>
-                  <span className="text-purple-400">const</span>{" "}
-                  <span className="text-blue-400">dev</span> = &#123;
+                  <span className="text-gray-200">const</span>{" "}
+                  <span className="text-gray-300">dev</span> = &#123;
                 </p>
                 <p className="ml-3">
-                  <span className="text-cyan-400">name</span>:{" "}
-                  <span className="text-green-400">&quot;Ammannaidu&quot;</span>
+                  <span className="text-gray-300">name</span>:{" "}
+                  <span className="text-gray-400">&quot;Ammannaidu&quot;</span>
                   ,
                 </p>
                 <p className="ml-3">
-                  <span className="text-cyan-400">role</span>:{" "}
-                  <span className="text-orange-400">&quot;Engineer&quot;</span>,
+                  <span className="text-gray-300">role</span>:{" "}
+                  <span className="text-gray-400">&quot;Engineer&quot;</span>,
                 </p>
                 <p className="ml-3">
-                  <span className="text-cyan-400">passion</span>:{" "}
-                  <span className="text-pink-400">
+                  <span className="text-gray-300">passion</span>:{" "}
+                  <span className="text-gray-400">
                     &quot;Build & Design&quot;
                   </span>
                 </p>
@@ -310,9 +310,9 @@ export default function Hero() {
             <div className="relative mb-8">
               <div className="flex items-start gap-6">
                 <div className="relative group">
-                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-2xl blur opacity-60 group-hover:opacity-100 transition duration-500"></div>
-                  <div className="relative w-20 h-24 rounded-xl overflow-hidden border border-slate-700 bg-slate-800">
-                    <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-white via-gray-400 to-gray-600 rounded-2xl blur opacity-50 group-hover:opacity-80 transition duration-500"></div>
+                  <div className="relative w-20 h-24 rounded-xl overflow-hidden border border-gray-600 bg-slate-800">
+                    <div className="w-full h-full bg-gradient-to-br from-gray-200 to-gray-700 flex items-center justify-center text-white text-2xl font-bold">
                       <img
                         src="/images/profile-light.jpg"
                         alt="Ammannaidu Gollapalli"
@@ -320,13 +320,13 @@ export default function Hero() {
                       />
                     </div>
                   </div>
-                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-400 rounded-full border-2 border-slate-900 flex items-center justify-center">
-                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-white rounded-full border-2 border-slate-900 flex items-center justify-center">
+                    <div className="w-2 h-2 bg-black rounded-full"></div>
                   </div>
                 </div>
 
                 <div className="flex-1">
-                  <span className="inline-flex items-center gap-2 text-blue-400 font-semibold text-sm uppercase tracking-wider mb-2">
+                  <span className="inline-flex items-center gap-2 text-gray-300 font-semibold text-sm uppercase tracking-wider mb-2">
                     <Zap size={16} />
                     Software Engineer
                   </span>
@@ -334,7 +334,7 @@ export default function Hero() {
                   <h1 className="text-4xl xl:text-6xl 2xl:text-7xl font-bold leading-tight">
                     <span className="text-white">Ammannaidu</span>
                     <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 via-gray-400 to-white">
                       Gollapalli
                     </span>
                   </h1>
@@ -343,13 +343,13 @@ export default function Hero() {
             </div>
 
             <div className="mb-8">
-              <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 relative overflow-hidden">
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500"></div>
-                <p className="text-2xl text-slate-200 font-medium flex items-center flex-wrap gap-2">
-                  <Code2 className="text-blue-400 flex-shrink-0" size={24} />
+              <div className="bg-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-white via-gray-400 to-gray-700"></div>
+                <p className="text-2xl text-gray-200 font-medium flex items-center flex-wrap gap-2">
+                  <Code2 className="text-gray-300 flex-shrink-0" size={24} />
                   <span className="min-h-[1.5em] flex items-center">
                     {typedText}
-                    <span className="text-blue-400 ml-1 animate-pulse">|</span>
+                    <span className="text-gray-400 ml-1 animate-pulse">|</span>
                   </span>
                 </p>
               </div>
@@ -361,19 +361,19 @@ export default function Hero() {
                   Icon: Github,
                   href: "https://github.com/Ammannaidu-228",
                   label: "GitHub",
-                  color: "hover:text-purple-400",
+                  color: "hover:text-gray-300",
                 },
                 {
                   Icon: Linkedin,
                   href: "https://www.linkedin.com/in/ammannaidu-gollapalli-4591a639b/",
                   label: "LinkedIn",
-                  color: "hover:text-blue-400",
+                  color: "hover:text-white",
                 },
                 {
                   Icon: Mail,
                   href: "ammannaidu.dev@gmail.com",
                   label: "Email",
-                  color: "hover:text-green-400",
+                  color: "hover:text-gray-300",
                 },
               ].map(({ Icon, href, label, color }) => (
                 <a
@@ -381,10 +381,10 @@ export default function Hero() {
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  className={`group relative p-4 rounded-xl bg-slate-800/60 border border-slate-700 hover:border-opacity-100 transition-all duration-300 ${color}`}
+                  className={`group relative p-4 rounded-xl bg-slate-800/40 border border-gray-700/60 hover:border-gray-400/50 hover:bg-slate-700/50 transition-all duration-300 ${color}`}
                 >
                   <Icon
-                    className="text-slate-300 group-hover:text-current transition-colors"
+                    className="text-gray-300 group-hover:text-current transition-colors"
                     size={20}
                   />
                   <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs font-medium text-white bg-slate-800 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
@@ -395,13 +395,13 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-wrap gap-4 mb-8">
-              <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/60 border border-slate-700">
-                <MapPin size={18} className="text-blue-400" />
-                <span className="text-slate-300">Vizag, India</span>
+              <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-800/30 border border-gray-700/60">
+                <MapPin size={18} className="text-gray-300" />
+                <span className="text-gray-300">Vizag, India</span>
               </div>
-              <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-emerald-900/20 border border-emerald-700/50">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <span className="text-green-300">
+              <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white/5 border border-white/20">
+                <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                <span className="text-gray-200">
                   Available for opportunities
                 </span>
               </div>
@@ -409,7 +409,7 @@ export default function Hero() {
 
             <div className="flex gap-4">
               <Link href="#experience">
-                <button className="group relative px-8 py-4 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 rounded-xl text-white font-semibold flex items-center gap-3 overflow-hidden hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300">
+                <button className="group relative px-8 py-4 bg-gradient-to-r from-white via-gray-300 to-gray-400 rounded-xl text-black font-semibold flex items-center gap-3 overflow-hidden hover:shadow-lg hover:shadow-gray-400/50 transition-all duration-300">
                   <Star size={20} />
                   <span>View My Work</span>
                   <ArrowRight
@@ -422,12 +422,12 @@ export default function Hero() {
           </div>
 
           <div className="hidden lg:block lg:col-span-5 space-y-6">
-            <div className="bg-slate-900/70 backdrop-blur-md border border-slate-700/50 rounded-2xl p-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full -translate-y-8 translate-x-8"></div>
+            <div className="bg-slate-900/50 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/5 to-gray-400/5 rounded-full -translate-y-8 translate-x-8"></div>
               <div className="relative z-10">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-blue-500/20">
-                    <Code2 className="text-blue-400" size={20} />
+                  <div className="p-2 rounded-lg bg-white/10">
+                    <Code2 className="text-gray-300" size={20} />
                   </div>
                   <h3 className="text-white font-bold text-lg">Tech Focus</h3>
                 </div>
@@ -439,7 +439,7 @@ export default function Hero() {
                     >
                       {techStack[currentTech].name}
                     </p>
-                    <p className="text-slate-400 text-sm">
+                    <p className="text-gray-400 text-sm">
                       {techStack[currentTech].desc}
                     </p>
                   </div>
@@ -451,56 +451,56 @@ export default function Hero() {
               {achievements.map((achievement) => (
                 <div
                   key={achievement.label}
-                  className="bg-slate-900/70 backdrop-blur-md border border-slate-700/50 rounded-xl p-4 text-center hover:border-blue-500/50 transition-colors duration-300"
+                  className="bg-slate-900/50 backdrop-blur-md border border-gray-700/50 rounded-xl p-4 text-center hover:border-gray-400/50 transition-colors duration-300"
                 >
                   <div className="text-2xl font-bold text-white mb-1">
                     {achievement.number}
                   </div>
-                  <div className="text-xs text-slate-400 uppercase leading-tight">
+                  <div className="text-xs text-gray-400 uppercase leading-tight">
                     {achievement.label}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="bg-slate-950/80 backdrop-blur-md border border-slate-700/50 rounded-2xl p-6 font-mono text-sm relative overflow-hidden">
+            <div className="bg-slate-950/80 backdrop-blur-md border border-gray-700/50 rounded-2xl p-6 font-mono text-sm relative overflow-hidden">
               <div className="flex gap-2 mb-4">
-                <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-gray-400 rounded-full"></div>
+                <div className="w-3 h-3 bg-gray-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-gray-600 rounded-full"></div>
               </div>
-              <div className="space-y-1 text-slate-300">
+              <div className="space-y-1 text-gray-400">
                 <p>
-                  <span className="text-purple-400">const</span>{" "}
-                  <span className="text-blue-400">developer</span> = &#123;
+                  <span className="text-gray-200">const</span>{" "}
+                  <span className="text-gray-300">developer</span> = &#123;
                 </p>
                 <p className="ml-4">
-                  <span className="text-cyan-400">name</span>:{" "}
-                  <span className="text-green-400">&quot;Ammannaidu&quot;</span>
+                  <span className="text-gray-300">name</span>:{" "}
+                  <span className="text-gray-400">&quot;Ammannaidu&quot;</span>
                   ,
                 </p>
                 <p className="ml-4">
-                  <span className="text-cyan-400">role</span>:{" "}
-                  <span className="text-orange-400">
+                  <span className="text-gray-300">role</span>:{" "}
+                  <span className="text-gray-400">
                     &quot;Software Engineer&quot;
                   </span>
                   ,
                 </p>
                 <p className="ml-4">
-                  <span className="text-cyan-400">location</span>:{" "}
-                  <span className="text-yellow-400">
+                  <span className="text-gray-300">location</span>:{" "}
+                  <span className="text-gray-400">
                     &quot;Visakhapatnam, IN&quot;
                   </span>
                   ,
                 </p>
                 <p className="ml-4">
-                  <span className="text-cyan-400">passion</span>:{" "}
-                  <span className="text-pink-400">
+                  <span className="text-gray-300">passion</span>:{" "}
+                  <span className="text-gray-400">
                     &quot;Design & Develop software&quot;
                   </span>
                 </p>
                 <p>&#125;;</p>
-                <p className="mt-2 text-slate-500 text-xs">
+                <p className="mt-2 text-gray-600 text-xs">
                   Ready to create something amazing?
                 </p>
               </div>
