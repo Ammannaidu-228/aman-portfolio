@@ -117,7 +117,7 @@ export default function Footer() {
                     </p>
                   </div>
                 </div>
-                <p className="text-slate-300 leading-relaxed">
+                <p className="text-gray-300 leading-relaxed">
                   3+ yrs experience in Java, Spring Boot,
                   Microservices, SQL/NoSQL, AWS, and distributed systems. Strong
                   in DSA, performance optimization, and building scalable,
@@ -127,21 +127,21 @@ export default function Footer() {
 
               {/* Contact Info */}
               <div className="space-y-3">
-                <div className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors group">
+                <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
                   <MapPin
                     size={18}
                     className="group-hover:scale-110 transition-transform"
                   />
                   <span>Vizag, India</span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors group">
+                <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
                   <Phone
                     size={18}
                     className="group-hover:scale-110 transition-transform"
                   />
                   <span>+91 8978239237</span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-colors group">
+                <div className="flex items-center gap-3 text-gray-300 hover:text-white transition-colors group">
                   <Mail
                     size={18}
                     className="group-hover:scale-110 transition-transform"
@@ -151,11 +151,11 @@ export default function Footer() {
               </div>
 
               {/* Current Time */}
-              <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-4 backdrop-blur-sm">
+              <div className="bg-gray-900/50 border border-gray-700/50 rounded-xl p-4 backdrop-blur-sm">
                 <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                  <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                   <div>
-                    <p className="text-sm text-slate-400">Local Time</p>
+                    <p className="text-sm text-gray-400">Local Time</p>
                     <p className="text-white font-semibold">
                       {currentTime.toLocaleTimeString("en-US", {
                         timeZone: "Asia/Kolkata",
@@ -174,7 +174,7 @@ export default function Footer() {
               {/* Quick Links */}
               <div>
                 <h4 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                  <Zap size={20} className="text-cyan-400" />
+                  <Zap size={20} className="text-gray-300" />
                   Quick Links
                 </h4>
                 <div className="space-y-3">
@@ -182,9 +182,9 @@ export default function Footer() {
                     <a
                       key={link.label}
                       href={link.href}
-                      className="flex items-center gap-3 text-slate-300 hover:text-cyan-400 transition-all group py-1"
+                      className="flex items-center gap-3 text-gray-300 hover:text-white transition-all group py-1"
                     >
-                      <div className="w-1 h-1 bg-slate-500 rounded-full group-hover:w-2 group-hover:bg-cyan-400 transition-all"></div>
+                      <div className="w-1 h-1 bg-gray-500 rounded-full group-hover:w-2 group-hover:bg-white transition-all"></div>
                       <span className="group-hover:translate-x-1 transition-transform">
                         {link.label}
                       </span>
@@ -194,7 +194,7 @@ export default function Footer() {
               </div>
 
               {/* Tech Highlight */}
-              <div className="bg-gradient-to-r from-slate-800/30 to-slate-700/30 border border-slate-600/50 rounded-xl p-6 backdrop-blur-sm">
+              <div className="bg-gradient-to-r from-gray-900/30 to-gray-800/30 border border-gray-700/50 rounded-xl p-6 backdrop-blur-sm">
                 <h4 className="text-lg font-bold text-white mb-4">
                   Currently Working With
                 </h4>
@@ -203,7 +203,7 @@ export default function Footer() {
                     (tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-slate-700/50 text-cyan-400 text-sm rounded-full border border-slate-600/50 hover:border-cyan-400/50 transition-colors"
+                        className="px-3 py-1 bg-gray-800/50 text-gray-300 text-sm rounded-full border border-gray-700/50 hover:border-gray-400/50 transition-colors"
                       >
                         {tech}
                       </span>
@@ -216,7 +216,7 @@ export default function Footer() {
             {/* Right Column - Contact Form */}
             <div className="space-y-6">
               <h4 className="text-xl font-bold text-white flex items-center gap-2">
-                <Send size={20} className="text-cyan-400" />
+                <Send size={20} className="text-gray-300" />
                 Let&apos;s Connect
               </h4>
 
@@ -231,7 +231,7 @@ export default function Footer() {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`p-3 bg-slate-800/50 border border-slate-700/50 rounded-xl text-slate-400 transition-all hover:scale-110 transform ${social.color} ${social.bg} group`}
+                        className={`p-3 bg-gray-900/50 border border-gray-700/50 rounded-xl text-gray-400 transition-all hover:scale-110 transform ${social.color} ${social.bg} group`}
                         title={social.label}
                       >
                         <Icon

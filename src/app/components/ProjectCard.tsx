@@ -73,7 +73,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       {/* Featured Badge */}
       {project.featured && (
         <div className="absolute top-4 left-4 z-20">
-          <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+          <div className="bg-gradient-to-r from-white to-gray-400 text-black px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
             <Star size={12} />
             Featured
           </div>
@@ -127,7 +127,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             rel="noreferrer"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-200 flex items-center gap-2"
+            className="bg-gradient-to-r from-white to-gray-400 text-black px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-200 flex items-center gap-2"
           >
             <ExternalLink size={16} />
             Demo
@@ -138,7 +138,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       {/* Content */}
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-200">
+          <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors duration-200">
             {project.title}
           </h3>
           <div className="flex items-center text-sm text-gray-500 dark:text-gray-400">

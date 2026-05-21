@@ -91,7 +91,7 @@ export default function Projects() {
         /* LIGHT THEME - Minimalist, clean, professional */
         bg-gradient-to-b from-white via-gray-50/50 to-white
         /* DARK THEME - Bold, electric, futuristic */
-        dark:bg-gradient-to-b dark:from-gray-950 dark:via-purple-950/30 dark:to-gray-950
+        dark:bg-gradient-to-b dark:from-black dark:via-slate-950/30 dark:to-black
       "
     >
       {/* BACKGROUND ELEMENTS - Completely different for each theme */}
@@ -109,17 +109,17 @@ export default function Projects() {
       {/* DARK THEME Background - Dramatic and electric */}
       <div className="absolute inset-0 hidden dark:block">
         {/* Electric grid */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         
         {/* Glowing orbs */}
-        <div className="absolute top-1/4 left-1/4 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-56 sm:w-72 lg:w-80 h-56 sm:h-72 lg:h-80 bg-pink-500/10 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 sm:w-56 lg:w-64 h-48 sm:h-56 lg:h-64 bg-cyan-500/5 rounded-full blur-2xl animate-pulse animation-delay-4000"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 sm:w-80 lg:w-96 h-64 sm:h-80 lg:h-96 bg-white/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-56 sm:w-72 lg:w-80 h-56 sm:h-72 lg:h-80 bg-gray-400/5 rounded-full blur-3xl animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 sm:w-56 lg:w-64 h-48 sm:h-56 lg:h-64 bg-gray-500/5 rounded-full blur-2xl animate-pulse animation-delay-4000"></div>
         
         {/* Electric sparks */}
-        <div className="absolute top-32 right-32 w-1 h-1 bg-purple-400 rounded-full animate-ping"></div>
-        <div className="absolute bottom-40 left-40 w-0.5 h-0.5 bg-pink-400 rounded-full animate-ping animation-delay-1000"></div>
-        <div className="absolute top-2/3 right-1/3 w-0.5 h-0.5 bg-cyan-400 rounded-full animate-ping animation-delay-3000"></div>
+        <div className="absolute top-32 right-32 w-1 h-1 bg-gray-300 rounded-full animate-ping"></div>
+        <div className="absolute bottom-40 left-40 w-0.5 h-0.5 bg-gray-400 rounded-full animate-ping animation-delay-1000"></div>
+        <div className="absolute top-2/3 right-1/3 w-0.5 h-0.5 bg-gray-300 rounded-full animate-ping animation-delay-3000"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -148,17 +148,17 @@ export default function Projects() {
 
           {/* DARK THEME Header */}
           <div className="hidden dark:block">
-            <motion.div className="inline-flex items-center gap-2 mb-4 sm:mb-6 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-gradient-to-r from-purple-900/50 to-pink-900/50 border border-purple-500/30 backdrop-blur-sm">
-              <Sparkles className="w-4 sm:w-5 h-4 sm:h-5 text-purple-400 animate-pulse" />
-              <span className="text-xs sm:text-sm font-semibold text-purple-300 tracking-wider">PORTFOLIO</span>
-              <Sparkles className="w-4 sm:w-5 h-4 sm:h-5 text-pink-400 animate-pulse animation-delay-500" />
+            <motion.div className="inline-flex items-center gap-2 mb-4 sm:mb-6 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-gradient-to-r from-white/10 to-gray-400/10 border border-white/30 backdrop-blur-sm">
+              <Sparkles className="w-4 sm:w-5 h-4 sm:h-5 text-white animate-pulse" />
+              <span className="text-xs sm:text-sm font-semibold text-white tracking-wider">PORTFOLIO</span>
+              <Sparkles className="w-4 sm:w-5 h-4 sm:h-5 text-gray-400 animate-pulse animation-delay-500" />
             </motion.div>
 
             <motion.h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 leading-none">
-              <span className="bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text text-transparent">
                 FEATURED
               </span>
-              <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">
+              <span className="block mt-1 sm:mt-2 bg-gradient-to-r from-white via-gray-400 to-gray-500 bg-clip-text text-transparent animate-pulse">
                 PROJECTS
               </span>
             </motion.h2>
@@ -200,15 +200,15 @@ export default function Projects() {
           </div>
 
           {/* DARK THEME Filter */}
-          <div className="hidden dark:flex flex-wrap justify-center gap-2 sm:gap-3 p-2 rounded-2xl bg-gray-900/50 border border-purple-500/30 backdrop-blur-md max-w-full">
+          <div className="hidden dark:flex flex-wrap justify-center gap-2 sm:gap-3 p-2 rounded-2xl bg-gray-900/50 border border-white/30 backdrop-blur-md max-w-full">
             {categories.map(category => (
               <button
                 key={category}
                 onClick={() => handleCategoryChange(category)}
                 className={`px-4 sm:px-8 py-2 sm:py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 whitespace-nowrap ${
                   activeCategory === category
-                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/50 border border-purple-400'
-                    : 'text-gray-300 bg-gray-800/50 hover:bg-gradient-to-r hover:from-purple-600/20 hover:to-pink-600/20 border border-gray-700 hover:border-purple-500/50 hover:text-white'
+                    ? 'bg-gradient-to-r from-white to-gray-400 text-black shadow-lg shadow-white/50 border border-white'
+                    : 'text-gray-300 bg-gray-800/50 hover:bg-gradient-to-r hover:from-white/20 hover:to-gray-400/20 border border-gray-700 hover:border-white/50 hover:text-white'
                 }`}
               >
                 {category}
