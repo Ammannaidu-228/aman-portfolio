@@ -4,17 +4,17 @@ import React, { useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { 
   Code2,
-  Lightbulb,
-  Target,
+  Compass,
+  Wrench,
+  Sparkles,
   Users,
   Award,
-  BookOpen,
-  Coffee,
+  Layers,
   Heart,
   Rocket,
-  Brain,
+  Bot,
   Zap,
-  Globe,
+  ShieldCheck,
   Calendar
 } from 'lucide-react';
 
@@ -25,47 +25,47 @@ export default function About() {
 
   const tabs = [
     { 
-      id: 'story', 
-      label: 'My Story', 
-      icon: BookOpen,
+      id: 'journey', 
+      label: 'The Journey', 
+      icon: Compass,
       content: {
-        title: "From Civil Engineering to Code",
-        description: "My journey took an unconventional turn from Civil Engineering at IIIT Nuzvid to becoming a backend-focused Software Development Engineer. Over the past 4 years at Infosys, I've migrated 25+ legacy mainframe systems to modern microservices, designed 40+ scalable REST APIs, and worked on mission-critical systems for BNSF Railways and Mercedes-Benz.",
+        title: "Four Years in the Machine Room",
+        description: "I started out where most of the internet's boring-but-critical work happens: enterprise backend systems nobody sees until they break. At Infosys, I spent four years as the engineer companies like BNSF Railways and Mercedes-Benz called in to modernize what legacy code had left behind — pulling 25+ mainframe modules into 40+ independently deployable microservices, one careful migration at a time.",
         highlights: [
-          { icon: Lightbulb, text: "Graduated from IIIT Nuzvid with 8.5 CGPA in Civil Engineering" },
-          { icon: Rocket, text: "Built enterprise systems for Fortune 500 clients at Infosys" },
-          { icon: Target, text: "Specialized in Java, Spring Boot, and microservices architecture" },
-          { icon: Users, text: "Led code reviews and mentored developers on SOLID principles" }
+          { icon: Rocket, text: "Owned end-to-end migration of 25+ legacy modules into 40+ production REST APIs" },
+          { icon: Zap, text: "Cut p99 latency 20% on services handling 5M+ daily requests" },
+          { icon: ShieldCheck, text: "Shipped 99.9%-uptime services for a Fortune 500 automotive OEM" },
+          { icon: Users, text: "Sat as the direct client point of contact, not just a ticket-taker" }
         ]
       }
     },
     {
-      id: 'philosophy',
-      label: 'Philosophy',
-      icon: Brain,
+      id: 'craft',
+      label: 'How I Build',
+      icon: Wrench,
       content: {
-        title: "Engineering Excellence & Innovation",
-        description: "I believe in writing clean, maintainable code that stands the test of time. My approach combines deep technical expertise with practical problem-solving—from modernizing legacy mainframe systems to building ML-powered applications. I'm driven by the challenge of transforming complex business requirements into elegant, scalable solutions.",
+        title: "Boring Code, Exciting Systems",
+        description: "My philosophy hasn't changed even as my stack has: the flashiest part of a system should never be the part that keeps you up at night. That means SOLID design in every review, test coverage that's actually trustworthy, and instrumentation that tells you what broke before a customer does. It's the same discipline whether I'm tuning a Hibernate connection pool or debugging a vector index that crashed a container on deploy.",
         highlights: [
-          { icon: Heart, text: "Quality-first approach with 80%+ test coverage and code reviews" },
-          { icon: Zap, text: "Performance optimization reducing response times by 20-25%" },
-          { icon: Globe, text: "Cross-functional collaboration with architects, QA, and SMEs" },
-          { icon: Coffee, text: "Continuous learner with AWS, Azure, and Big Data certifications" }
+          { icon: Code2, text: "Enforced SOLID design in reviews, drove test coverage past 80%" },
+          { icon: Layers, text: "Read-replica routing & connection pooling to shave latency at scale" },
+          { icon: Bot, text: "Debugged a production RAG crash-loop down to a missing HNSW index" },
+          { icon: Award, text: "AWS, Azure & Big Data certified — theory backed by shipped systems" }
         ]
       }
     },
     {
-      id: 'expertise',
-      label: 'Expertise',
-      icon: Award,
+      id: 'next',
+      label: "What's Next",
+      icon: Sparkles,
       content: {
-        title: "Backend Engineering & System Design",
-        description: "Specialized in backend development with Java and Spring Boot, I've architected microservices handling high-volume traffic for Fortune 500 companies. My expertise spans legacy system modernization, REST API design, database optimization, and cloud-native deployments. I've successfully delivered 95% of projects on-time while maintaining 99.9% system uptime.",
+        title: "Pointing the Same Skills at AI",
+        description: "The systems-thinking that migrated mainframes is the same muscle that ships agentic AI: both are about turning ambiguous requirements into something that runs reliably in production. I've been deliberately extending that backend foundation into RAG pipelines, vector search, and multi-step agents with LangChain and LangGraph — not as a pivot away from engineering rigor, but as the next place it's needed most.",
         highlights: [
-          { icon: Code2, text: "Java, Spring Boot, Hibernate, JPA with 40+ production APIs" },
-          { icon: Globe, text: "AWS & Azure certified with hands-on cloud deployment experience" },
-          { icon: Zap, text: "Microservices, CI/CD pipelines, Docker, and Kubernetes" },
-          { icon: Target, text: "MySQL optimization, ETL automation, and data engineering" }
+          { icon: Bot, text: "Built production RAG pipelines with LangChain, Chroma & OpenAI embeddings" },
+          { icon: Layers, text: "Comfortable across the stack: FastAPI services to Hugging Face fine-tuning" },
+          { icon: Heart, text: "Looking for teams solving the model-to-product gap, not just the model" },
+          { icon: Rocket, text: "Targeting AI Engineer & Founding Engineer roles where both muscles matter" }
         ]
       }
     }
@@ -73,9 +73,9 @@ export default function About() {
 
   const stats = [
     { number: "40+", label: "REST APIs Built", icon: Rocket },
-    { number: "3+", label: "Years Experience", icon: Calendar },
+    { number: "4+", label: "Years Experience", icon: Calendar },
     { number: "25+", label: "Systems Migrated", icon: Users },
-    { number: "3+", label: "Cloud Certifications", icon: Award }
+    { number: "4+", label: "Cloud Certifications", icon: Award }
   ];
 
   const currentTab = tabs[activeTab];
@@ -119,7 +119,7 @@ export default function About() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4 }}
           >
-            Backend engineer passionate about building scalable systems, modernizing legacy applications, and solving complex technical challenges
+            Backend engineer by training, AI engineer by direction — I build the unglamorous parts that keep systems (and now, agents) running
           </motion.p>
         </motion.div>
 

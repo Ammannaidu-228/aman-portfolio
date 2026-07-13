@@ -4,15 +4,12 @@ import {
   Mail,
   Github,
   Linkedin,
-  Twitter,
   MapPin,
   Phone,
   Send,
-  Heart,
   ArrowUp,
   Code2,
   Zap,
-  ExternalLink,
 } from "lucide-react";
 
 export default function Footer() {
@@ -113,15 +110,15 @@ export default function Footer() {
                       Ammannaidu Gollapalli
                     </h3>
                     <p className="text-gray-300 font-semibold">
-                      Software Engineer
+                      Senior Software Engineer
                     </p>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  3+ yrs experience in Java, Spring Boot,
-                  Microservices, SQL/NoSQL, AWS, and distributed systems. Strong
-                  in DSA, performance optimization, and building scalable,
-                  production-grade services.
+                  4+ years building distributed backend systems in Java,
+                  Spring Boot, and microservices for Fortune 500 clients —
+                  now extending that foundation into RAG pipelines and
+                  agentic AI with LangChain, LangGraph, and Hugging Face.
                 </p>
               </div>
 
@@ -178,7 +175,7 @@ export default function Footer() {
                   Quick Links
                 </h4>
                 <div className="space-y-3">
-                  {quickLinks.map((link, index) => (
+                  {quickLinks.map((link) => (
                     <a
                       key={link.label}
                       href={link.href}
@@ -199,7 +196,7 @@ export default function Footer() {
                   Currently Working With
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  {["Java", "Spring Boot", "SQL", "AWS", "React Js"].map(
+                  {["Java", "Spring Boot", "LangChain", "AWS", "Python"].map(
                     (tech) => (
                       <span
                         key={tech}
@@ -252,7 +249,7 @@ export default function Footer() {
           <div className="max-w-6xl mx-auto px-6 py-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-6 text-slate-400 text-sm">
-                <span>© 2025 Ammannaidu. All rights reserved.</span>
+                <span>© 2026 Ammannaidu. All rights reserved.</span>
               </div>
             </div>
           </div>

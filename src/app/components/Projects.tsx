@@ -7,12 +7,12 @@ import ProjectCard from './ProjectCard';
 
 const projects = [
   { 
-    title: 'Threadora- E-commerce Platform', 
-    desc: 'Full-stack MERN e-commerce with secure payments, advanced search, Redis caching, and real-time inventory management',
+    title: 'Threadora - Event-Driven Microservices Platform', 
+    desc: 'Event-driven microservices architecture (8 independently deployable services) with JWT auth, API Gateway rate limiting, and Resilience4j circuit breakers achieving 99.5% uptime on AWS. Redis caching and DB indexing cut API latency by 35%, with distributed tracing (Spring Cloud Sleuth + Zipkin) reducing mean-time-to-debug by 50%.',
     img: '/images/threadora-logo.png', 
     repo: 'https://github.com/Ammannaidu-228/Thredora', 
     demo: 'https://threadora.ammannaidu.dev/',
-    tech: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redis'],
+    tech: ['Java 17', 'Spring Boot 3', 'Spring Cloud', 'Redis', 'MySQL', 'Docker', 'AWS', 'React'],
     category: 'Full Stack',
     status: 'Live',
     featured: true,
@@ -31,15 +31,15 @@ const projects = [
     year: '2024'
   },
   { 
-    title: 'LitPick - Book Recommender', 
-    desc: 'Recommendation engine using collaborative filtering and content-based algorithms to suggest personalized books for book enthusiasts.',
+    title: 'Lit-Pick - Agentic RAG Book Recommendation Engine', 
+    desc: 'Production RAG pipeline (LangChain + OpenAI embeddings + Chroma vector DB) behind an async FastAPI backend, handling 10K+ QPS at <150ms p99 - a 35% precision gain over collaborative filtering. Hybrid recommendation layer combines zero-shot sentiment classification with vector similarity search across 50K+ books, backed by MongoDB.',
     img: '/images/lit-pick-logo.png', 
     repo: 'https://github.com/Ammannaidu-228/lit-pick', 
     demo: 'https://lit-pick.vercel.app/',
-    tech: ['Flask', 'skikit-learn', 'Numpy', 'Pandas'],
+    tech: ['LangChain', 'FastAPI', 'Chroma', 'OpenAI Embeddings', 'Hugging Face', 'MongoDB'],
     category: 'AI/ML',
     status: 'Live',
-    featured: false,
+    featured: true,
     year: '2024'
   }
 ];

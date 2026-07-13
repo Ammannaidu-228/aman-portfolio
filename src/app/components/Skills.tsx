@@ -1,16 +1,15 @@
 'use client';
 import React, { useEffect, useRef } from 'react';
 import {
-  Code2, Database, Cloud, Terminal,
-  Workflow, HardDrive, Network, Layers
+  Brain, Code2, Database, Cloud, Workflow
 } from 'lucide-react';
 
 const SI_BASE = "https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/";
 
 interface Skill {
   name: string;
-  slug: string;
-  color: string; // brand hex color
+  slug?: string;   // omit for concepts/practices with no brand logo (e.g. "RAG Pipelines", "SOLID")
+  color?: string;  // brand hex color, required if slug is present
 }
 
 interface SkillCategory {
@@ -73,85 +72,77 @@ function ColoredLogo({ slug, name, color }: { slug: string; name: string; color:
 export default function Skills() {
   const skillCategories: SkillCategory[] = [
     {
-      title: "Languages",
+      title: "AI/ML & Agentic Systems",
+      icon: Brain,
+      skills: [
+        { name: "LLMs" },
+        { name: "RAG Pipelines" },
+        { name: "LangChain", slug: "langchain", color: "#1C3C3C" },
+        { name: "LangGraph" },
+        { name: "Agentic AI (ReAct)" },
+        { name: "Prompt & Context Engineering" },
+        { name: "OpenAI APIs", slug: "openai", color: "#412991" },
+        { name: "Hugging Face", slug: "huggingface", color: "#FFD21E" },
+        { name: "PyTorch", slug: "pytorch", color: "#EE4C2C" },
+        { name: "Vector Search & Embeddings" },
+        { name: "Fine-Tuning (LoRA/QLoRA)" },
+      ]
+    },
+    {
+      title: "Languages & Frameworks",
       icon: Code2,
       skills: [
-        { name: "Java",       slug: "openjdk",     color: "#ED8B00" },
-        { name: "Python",     slug: "python",       color: "#3776AB" },
-        { name: "JavaScript", slug: "javascript",   color: "#F7DF1E" },
-        { name: "TypeScript", slug: "typescript",   color: "#3178C6" },
-        { name: "Go",         slug: "go",           color: "#00ADD8" },
+        { name: "Java", slug: "openjdk", color: "#ED8B00" },
+        { name: "Python", slug: "python", color: "#3776AB" },
+        { name: "JavaScript", slug: "javascript", color: "#F7DF1E" },
+        { name: "TypeScript", slug: "typescript", color: "#3178C6" },
+        { name: "Spring Boot / WebFlux / Cloud", slug: "springboot", color: "#6DB33F" },
+        { name: "Hibernate", slug: "hibernate", color: "#59666C" },
+        { name: "FastAPI", slug: "fastapi", color: "#009688" },
+        { name: "React.js", slug: "react", color: "#61DAFB" },
+        { name: "Node.js", slug: "nodedotjs", color: "#5FA04E" },
       ]
     },
     {
-      title: "Backend",
+      title: "Databases, Vector Stores & Messaging",
       icon: Database,
       skills: [
-        { name: "Spring Boot", slug: "springboot", color: "#6DB33F" },
-        { name: "Node.js",     slug: "nodedotjs",  color: "#5FA04E" },
-        { name: "Django",      slug: "django",      color: "#44B78B" },
-        { name: "GraphQL",     slug: "graphql",     color: "#E10098" },
+        { name: "MySQL", slug: "mysql", color: "#4479A1" },
+        { name: "PostgreSQL", slug: "postgresql", color: "#4169E1" },
+        { name: "MongoDB", slug: "mongodb", color: "#47A248" },
+        { name: "Redis", slug: "redis", color: "#FF4438" },
+        { name: "Chroma (Vector DB)" },
+        { name: "Qdrant (Vector DB)" },
+        { name: "Kafka", slug: "apachekafka", color: "#ffffff" },
       ]
     },
     {
-      title: "Frontend",
-      icon: Layers,
-      skills: [
-        { name: "React",        slug: "react",       color: "#61DAFB" },
-        { name: "Next.js",      slug: "nextdotjs",   color: "#ffffff" },
-        { name: "TypeScript",   slug: "typescript",  color: "#3178C6" },
-        { name: "Tailwind CSS", slug: "tailwindcss", color: "#06B6D4" },
-      ]
-    },
-    {
-      title: "Databases",
-      icon: HardDrive,
-      skills: [
-        { name: "PostgreSQL",    slug: "postgresql",   color: "#4169E1" },
-        { name: "MySQL",         slug: "mysql",         color: "#4479A1" },
-        { name: "MongoDB",       slug: "mongodb",       color: "#47A248" },
-        { name: "Redis",         slug: "redis",         color: "#FF4438" },
-        { name: "Elasticsearch", slug: "elasticsearch", color: "#00BFB3" },
-      ]
-    },
-    {
-      title: "Message Queues",
-      icon: Network,
-      skills: [
-        { name: "Kafka",    slug: "apachekafka", color: "#ffffff" },
-        { name: "RabbitMQ", slug: "rabbitmq",    color: "#FF6600" },
-      ]
-    },
-    {
-      title: "DevOps & Cloud",
+      title: "Cloud & DevOps",
       icon: Cloud,
       skills: [
-        { name: "Docker",     slug: "docker",           color: "#2496ED" },
-        { name: "Kubernetes", slug: "kubernetes",        color: "#326CE5" },
-        { name: "AWS",        slug: "amazonwebservices", color: "#FF9900" },
-        { name: "GCP",        slug: "googlecloud",       color: "#4285F4" },
-        { name: "Azure",      slug: "microsoftazure",    color: "#0078D4" },
-        { name: "Terraform",  slug: "terraform",         color: "#844FBA" },
+        { name: "AWS (EC2, S3, Lambda, RDS)", slug: "amazonwebservices", color: "#FF9900" },
+        { name: "Azure", slug: "microsoftazure", color: "#0078D4" },
+        { name: "Docker", slug: "docker", color: "#2496ED" },
+        { name: "Kubernetes", slug: "kubernetes", color: "#326CE5" },
+        { name: "CI/CD", slug: "jenkins", color: "#D24939" },
+        { name: "Distributed Tracing" },
+        { name: "Observability" },
       ]
     },
     {
-      title: "CI/CD & Tools",
+      title: "System Design & Engineering Practice",
       icon: Workflow,
       skills: [
-        { name: "Git",            slug: "git",          color: "#F05032" },
-        { name: "Jenkins",        slug: "jenkins",       color: "#D24939" },
-        { name: "GitHub Actions", slug: "githubactions", color: "#2088FF" },
-        { name: "Postman",        slug: "postman",       color: "#FF6C37" },
+        { name: "HLD" },
+        { name: "LLD" },
+        { name: "Design Patterns" },
+        { name: "SOLID" },
+        { name: "Data Structures & Algorithms" },
+        { name: "Multithreading" },
+        { name: "Scalability" },
+        { name: "Fault Tolerance" },
       ]
     },
-    {
-      title: "IDEs & OS",
-      icon: Terminal,
-      skills: [
-        { name: "IntelliJ IDEA", slug: "intellijidea", color: "#FE315D" },
-        { name: "Linux",         slug: "linux",         color: "#FCC624" },
-      ]
-    }
   ];
 
   return (
@@ -172,7 +163,7 @@ export default function Skills() {
           <p className="text-gray-400">Technologies & Tools</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {skillCategories.map((category) => {
             const IconComponent = category.icon;
             return (
@@ -194,7 +185,9 @@ export default function Skills() {
                       title={skill.name}
                       className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-700/30 hover:bg-slate-700/60 transition-colors cursor-default border border-slate-600/50 hover:border-slate-500 group/item"
                     >
-                      <ColoredLogo slug={skill.slug} name={skill.name} color={skill.color} />
+                      {skill.slug && skill.color && (
+                        <ColoredLogo slug={skill.slug} name={skill.name} color={skill.color} />
+                      )}
                       <span className="text-xs font-medium text-gray-400 group-hover/item:text-white transition-colors whitespace-nowrap">
                         {skill.name}
                       </span>

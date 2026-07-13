@@ -10,16 +10,14 @@ import {
   ArrowRight,
   Star,
   Zap,
-  Download,
-  MessageCircle,
 } from "lucide-react";
 
 export default function Hero() {
   const typewriterTexts = [
     "Engineering microservices at scale",
+    "Building agentic AI & RAG pipelines",
     "Migrating legacy systems to modern architectures",
-    "Building high-availability backend solutions",
-    "Crafting seamless full-stack experiences",
+    "Shipping production LLM applications",
   ];
 
   const techStack = [
@@ -30,9 +28,9 @@ export default function Hero() {
       color: "from-white to-gray-300",
     },
     {
-      name: "React / Redux",
-      desc: "Modern Frontend",
-      icon: "⚛️",
+      name: "LangChain & RAG",
+      desc: "Agentic AI Systems",
+      icon: "🤖",
       color: "from-gray-200 to-gray-400",
     },
     {
@@ -42,16 +40,16 @@ export default function Hero() {
       color: "from-gray-300 to-gray-500",
     },
     {
-      name: "System Migration",
-      desc: "Legacy to Modern",
-      icon: "🔄",
+      name: "Vector Search",
+      desc: "Chroma & Qdrant",
+      icon: "🔎",
       color: "from-gray-400 to-gray-600",
     },
   ];
 
   const achievements = [
-    { number: "3+", label: "Years Experience" },
-    { number: "5+", label: "AWS & Azure Certs" },
+    { number: "4+", label: "Years Experience" },
+    { number: "4+", label: "AWS & Azure Certs" },
   ];
 
   const [typedText, setTypedText] = useState("");
@@ -91,6 +89,27 @@ export default function Hero() {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+
+  const socials = [
+    {
+      Icon: Github,
+      href: "https://github.com/Ammannaidu-228",
+      label: "GitHub",
+      color: "hover:text-gray-300",
+    },
+    {
+      Icon: Linkedin,
+      href: "https://www.linkedin.com/in/ammannaidu-gollapalli-4591a639b/",
+      label: "LinkedIn",
+      color: "hover:text-white",
+    },
+    {
+      Icon: Mail,
+      href: "mailto:ammannaidu.dev@gmail.com",
+      label: "Email",
+      color: "hover:text-gray-300",
+    },
+  ];
 
   return (
     <section
@@ -136,7 +155,7 @@ export default function Hero() {
                     <div className="flex items-center gap-2 mb-2">
                       <Zap size={14} className="text-gray-300 flex-shrink-0" />
                       <span className="text-gray-300 font-semibold text-xs uppercase tracking-wider">
-                        Software Engineer
+                        Senior Software Engineer
                       </span>
                     </div>
                     <h1 className="text-2xl font-bold leading-tight mb-1">
@@ -165,23 +184,7 @@ export default function Hero() {
 
                 {/* Social Links - Horizontal */}
                 <div className="flex gap-2">
-                  {[
-                    {
-                      Icon: Github,
-                      href: "https://github.com/Ammannaidu-228",
-                      label: "GitHub",
-                    },
-                    {
-                      Icon: Linkedin,
-                      href: "https://www.linkedin.com/in/ammannaidu-gollapalli-4591a639b",
-                      label: "LinkedIn",
-                    },
-                    {
-                      Icon: Mail,
-                      href: "ammannaidu.dev@gmail.com",
-                      label: "Email",
-                    },
-                  ].map(({ Icon, href, label }) => (
+                  {socials.map(({ Icon, href, label }) => (
                     <a
                       key={label}
                       href={href}
@@ -292,12 +295,15 @@ export default function Hero() {
                 </p>
                 <p className="ml-3">
                   <span className="text-gray-300">role</span>:{" "}
-                  <span className="text-gray-400">&quot;Engineer&quot;</span>,
+                  <span className="text-gray-400">
+                    &quot;Backend + AI Engineer&quot;
+                  </span>
+                  ,
                 </p>
                 <p className="ml-3">
-                  <span className="text-gray-300">passion</span>:{" "}
+                  <span className="text-gray-300">stack</span>:{" "}
                   <span className="text-gray-400">
-                    &quot;Build & Design&quot;
+                    &quot;Java · Python · LangChain&quot;
                   </span>
                 </p>
                 <p>&#125;;</p>
@@ -328,7 +334,7 @@ export default function Hero() {
                 <div className="flex-1">
                   <span className="inline-flex items-center gap-2 text-gray-300 font-semibold text-sm uppercase tracking-wider mb-2">
                     <Zap size={16} />
-                    Software Engineer
+                    Senior Software Engineer
                   </span>
 
                   <h1 className="text-4xl xl:text-6xl 2xl:text-7xl font-bold leading-tight">
@@ -356,26 +362,7 @@ export default function Hero() {
             </div>
 
             <div className="flex gap-4 mb-8">
-              {[
-                {
-                  Icon: Github,
-                  href: "https://github.com/Ammannaidu-228",
-                  label: "GitHub",
-                  color: "hover:text-gray-300",
-                },
-                {
-                  Icon: Linkedin,
-                  href: "https://www.linkedin.com/in/ammannaidu-gollapalli-4591a639b/",
-                  label: "LinkedIn",
-                  color: "hover:text-white",
-                },
-                {
-                  Icon: Mail,
-                  href: "ammannaidu.dev@gmail.com",
-                  label: "Email",
-                  color: "hover:text-gray-300",
-                },
-              ].map(({ Icon, href, label, color }) => (
+              {socials.map(({ Icon, href, label, color }) => (
                 <a
                   key={label}
                   href={href}
@@ -482,7 +469,7 @@ export default function Hero() {
                 <p className="ml-4">
                   <span className="text-gray-300">role</span>:{" "}
                   <span className="text-gray-400">
-                    &quot;Software Engineer&quot;
+                    &quot;Senior Software Engineer&quot;
                   </span>
                   ,
                 </p>
@@ -494,9 +481,9 @@ export default function Hero() {
                   ,
                 </p>
                 <p className="ml-4">
-                  <span className="text-gray-300">passion</span>:{" "}
+                  <span className="text-gray-300">focus</span>:{" "}
                   <span className="text-gray-400">
-                    &quot;Design & Develop software&quot;
+                    &quot;Backend systems + Agentic AI&quot;
                   </span>
                 </p>
                 <p>&#125;;</p>
